@@ -6,3 +6,13 @@
 
 # IDE
 .claude/
+
+# Images (source photos for OCR)
+*.heic
+*.HEIC
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
