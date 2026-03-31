@@ -1,0 +1,962 @@
+{
+  "version": "1.0",
+  "name": "第二篇 外科护理学",
+  "exportedAt": "2026-03-31T08:53:33Z",
+  "chapters": [
+    {
+      "id": "p02ch01",
+      "name": "第一章 尿路结石患者的护理",
+      "questions": [
+        {
+          "id": "p02ch01q001",
+          "type": "single",
+          "stem": "引起输尿管梗阻最常见的病因是",
+          "options": [
+            "A. 结石",
+            "C. 炎症",
+            "E. 先天性肾盂输尿管狭窄"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "引起输尿管梗阻的原因很多，有先天性的（如重复输尿管伴狭窄），后天 性的（结石、结核感染等），泌尿系统外的疾病（如子宫癌），以及医源性的原因（如盆腔 手术伤及输尿管）。所有选项均能引起输尿管梗阻，但最常见的原因是结石。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q002",
+          "type": "single",
+          "stem": "碱化尿液治疗尿石症效果最好的是",
+          "options": [
+            "A. 草酸钙、磷酸钙结石",
+            "C. 磷酸镁铵、尿酸结石",
+            "E. 胱氨酸、草酸钙结石"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "尿酸结石和脱氨酸结石在酸性尿中形成，治疗应碱化尿液。小苏打及枸橼 酸合剂可碱化尿液。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q003",
+          "type": "single",
+          "stem": "发生排尿疼痛时结石的部位在",
+          "options": [
+            "A. 膀胱",
+            "C. 输尿管",
+            "E. 肾盂"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "结石刺激膀胱黏膜或者并发感染所致，疼痛放射到远端尿道。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q004",
+          "type": "single",
+          "stem": "临床上肾绞痛最常见的病因是",
+          "options": [
+            "A. 肾肿瘤",
+            "C. 肾积水",
+            "E. 肾下垂"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "输尿管结石可以出现典型的肾绞痛（患側腰腹部阵发性剧烈绞痛，辗转不 安、大汗、恶心、呕吐、腹胀），典型肾绞痛可以引起强追体位。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q005",
+          "type": "single",
+          "stem": "泌尿系统结石最有效的预防方法是",
+          "options": [
+            "A. 控制感染",
+            "C. 调节尿液 pH",
+            "E. 中医中药"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "上尿路结石的治疗原则：大量饮水，保持每天尿量在2000ml以上，是预 —197一 防最有效的方法。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q006",
+          "type": "single",
+          "stem": "结石引起肾绞痛，应首先来用",
+          "options": [
+            "A. 抗感染治疗",
+            "C. 中西医排石洽疗",
+            "E. 给予镇静药治疗"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "肾绞痛的处理原则：解痉镇痛，必要时抗感染治疗。①疼痛能耐受或肾绞 痛后余痛，可选择口服镇痛药和解痉药物。②疼痛难以耐受就应肌内注射阿托品（解痉药 物），一般15~20分钟起效。③疼痛剧烈或肌内注射阿托品20分钟后疼痛仍未缓解者，通 常需要注射毒麻类药物如哌替啶或吗啡。因此肾绞痛时应首先解痉镇痛。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q007",
+          "type": "single",
+          "stem": "泌尿系统梗阻最危险的是",
+          "options": [
+            "A. 肾小球滤过率降低，尿量减少",
+            "B. 肾血管受压，血流量减少",
+            "D. 解痉治疗"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "尿路梗阻最危险的是细菌可直接进入血循环。进入的途径是肾盏穹隆部小 裂隙和变得极薄的尿路上皮层。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q008",
+          "type": "single",
+          "stem": "肾实质切开取石术后应",
+          "options": [
+            "A. 鼓励早期下床活动",
+            "B. 卧床24小时",
+            "C. 卧床3天",
+            "D. 卧床2周",
+            "E. 卧床1个月以上"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "肾切开取石患者至少需要卧床2周。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q009",
+          "type": "single",
+          "stem": "关于B超检查在诊断尿路结石方面的价值，下列选项中说法错误的是",
+          "options": [
+            "A. 能发现尿路X线片不能显示的小结石和透射结石",
+            "B. 能发现结石所致的肾脏结构改变",
+            "C. 可直接显示双肾功能改变",
+            "D. 可用于无尿、慢性肾衰竭患者",
+            "E. 可用于对碘剂过敏或孕妇合并结石患者"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "B超检查能发现X线平片不能显示的小结石和透X线结石，还能显示肾结 构改变和肾积水等。B超能直接观察到结石的位置、大小，肾脏、肾盂的大小，但是不能显 示肾功能的情况。排泄性尿路造影可显示结石所致的尿路形态和肾功能改变，有无结石形成 的局都因素。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q010",
+          "type": "single",
+          "stem": "下列哪种表现不是肾、输尿管结石常见的",
+          "options": [
+            "A. 腰痛和镜下血尿",
+            "B. 肾绞痛时伴恶心、呕吐",
+            "C. 尿中有红细胞、白细胞",
+            "D. 无痛性肉眼可见的血尿伴有条状血块",
+            "E. 肾绞痛时向下肢、外阴部和大腿内侧放射"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "血尿是肾结石的另一常见临床表现，约80%的患者可出现血尿，但大多 效只表现为镜下血尿，部分患者可以只出现无痛性肉眼血尿。结石梗阻合并感染以及结石物 理刺激引起黏膜下血管损伤出血，多为镜下血尿，也可形成全程肉眼血尿，严重出血者甚至 形成蚯蚓状条形血块。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q011",
+          "type": "single",
+          "stem": "下列哪项内容与避免结石再发无关",
+          "options": [
+            "A. 养成多饮水的习惯",
+            "B. 积极治疗尿路感染",
+            "C. 碱化尿液，口服别嘌醇",
+            "D. 鼓励多活动",
+            "E. 去除尿路梗阻因素"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "多活动可以促进较小的结石排出，但是不能避免结石再发。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q012",
+          "type": "single",
+          "stem": "输尿管结石患者绞痛发作时，最重要的处理方法是",
+          "options": [
+            "A. 大量饮水",
+            "B. 跳跃运动",
+            "C. 应用抗菌药",
+            "D. 给子解痉药物",
+            "E. 嘱卧床休息"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "肾绞痛的处理原则：解痉镇痛，必要时抗感染治疗。①疼痛能耐受或肾绞 痛后余痛，可选择口服镇痛药和解痉药物。②疼痛难以耐受就应肌内注射阿托品（解痉药 物），一般15~20分钟起效。③疼痛剧烈或肌内注射阿托品20分钟后疼痛仍未缓解者，通 常需要注射毒麻类药物如哌替啶或吗啡。因此肾绞痛时应首先解痉镇痛。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q013",
+          "type": "single",
+          "stem": "上尿路结石中最常见的类型是",
+          "options": [
+            "A. 尿酸结石",
+            "B. 碳酸钙结石",
+            "C. 草酸钙结石 身 水犬】",
+            "D. 磷酸镁铵结石",
+            "E. 胱氨酸结石"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "尿路结石中，草酸钙结石最常见。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q014",
+          "type": "single",
+          "stem": "上尿路结石形成的因素与（ ） 无关",
+          "options": [
+            "A. 饮食结构中肉类过多",
+            "C. 尿中枸橼酸增多",
+            "D. 肾小管酸中毒",
+            "E. 饮食结构中纤维素过少 如 B. 长期卧床不起"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "枸橼酸不是构成结石的成分，因此尿中枸橼酸增多与结石形成无关。上 尿路结石主要表现是与活动有关的疼痛和血尿。其程度与结石的部位、大小、活动与否及有 无损伤、感染、梗阻等有关。所以长期卧床不起也是上尿感染形成的因素。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q015",
+          "type": "single",
+          "stem": "输尿管末端结石常伴有的症状是",
+          "options": [
+            "A. 无痛性全程肉眼血尿",
+            "B. 肾绞痛＋镜下血尿"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "输尿管末端结石最典型的症状就是膀胱刺激征，因为结石在膀胱壁内向 下移动时，就会刺激膀胱三角区出现不停地痉挛和收缩，出现尿频、尿急、尿痛的症状。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q016",
+          "type": "single",
+          "stem": "肾结石患者的主要症状是",
+          "options": [
+            "A. 活动后镜下血尿",
+            "B. 排尿困难",
+            "C. 尿频、尿急",
+            "D. 尿失禁",
+            "E. 无痛性血尿"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肾结石患者的主要症状是活动后的镜下血尿，有时活动后镜下血尿是上 尿路结石患者唯一的临床表现。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q017",
+          "type": "single",
+          "stem": "膀胱结石的典型症状是",
+          "options": [
+            "A. 血尿伴腰部绞痛",
+            "B. 脓尿",
+            "C. 夜尿增多，排尿困难进行性加重D.尿频、尿急及尿痛",
+            "E. 排尿困难，尿流中断，改变体位又可排尿"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "排尿突然中断：膀胱结石的典型症状，改变体位尿可继续排出。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q018",
+          "type": "single",
+          "stem": "上尿路结石的主要症状为",
+          "options": [
+            "A. 无痛性全程血尿",
+            "B. 肾绞痛＋镜下血尿",
+            "C. 尿痛、尿频",
+            "D. 排尿困难",
+            "E. 尿失禁"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "上尿路结石典型临床表现为疼痛、血尿、恶心、呕吐、腹胀、感染、尿 闭等，部分可出现膀胱刺激征，严重者可导致尿路梗阻和肾功能损伤。有时活动后镜下血尿 是上尿路结石的唯一临床表现。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q019",
+          "type": "single",
+          "stem": "患者，男性，51岁。排尿过程中突然尿流中断，疼痛剧烈，改变体位后又可排尿。应 考虑",
+          "options": [
+            "A. 肾结石",
+            "B. 输尿管结石",
+            "C. 膀胱结石",
+            "D. 后尿道结石",
+            "E. 前尿道结石"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "根据患者排尿过程中突然尿流中断，疼痛剧烈，改变体位后又可排尿可诊 断为膀胱结石。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q020",
+          "type": "single",
+          "stem": "思者，男性，45岁。经常发生肾绞痛、血尿，疑为肾结石，需做静脉肾盂造影。造影前 准备下列哪项正确",
+          "options": [
+            "A. 清洁灌肠",
+            "B. 2天前禁食",
+            "C. 检查前憋尿",
+            "D. 鼓励饮水",
+            "E. 需做碘过敏试验"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "静脉肾盂造影前必须做碘过敏试验。检查前需排空膀胱内的尿液。静脉肾 198— 孟造影前患者应适当限水，目的是减少肾脏排泄，从而使造影剂的浓度在肾内相对增高而达 到造影效果。造影检查后为促进造影剂排泄，应增加饮水量。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q021",
+          "type": "single",
+          "stem": "患者，女性，40岁。因左侧肾盏结石住院行肾实质切开取石。术后卧床时间为",
+          "options": [
+            "A. 7天",
+            "B. 14天",
+            "C. 20天",
+            "D. 30天",
+            "E. 鼓励早期下床"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "肾切开取石患者至少需要卧床2周。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q022",
+          "type": "single",
+          "stem": "患者，男性，45岁。发现右肾多发结石，左肾孟结石直径1.2cm。当发生肾绞痛时，护 士可准备哪些药物",
+          "options": [
+            "A. 复方阿司匹林（APC）",
+            "B. 吗啡"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "治疗肾绞痛常用镇痛药物如下：非留体抗炎药，如双氯芬酸、吲哚美辛； 阿片类镇痛药，如哌替啶、曲马多等；解痉药物主要有阿托品、钙离子通道阻滞药、孕 酮等。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q023",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。\n该患者首先应考虑诊断为",
+          "options": [
+            "A. 前列腺增生",
+            "B. 右肾结石",
+            "C. 膀胱结石",
+            "D. 上尿路结石",
+            "E. 下尿路结石"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "根据患者表现和体征可诊断上尿路结石。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q024",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。\n拟行造影，患者造影前应做哪项准备",
+          "options": [
+            "A. 禁食1天",
+            "B. 做碘过敏试验",
+            "C. 多饮水",
+            "D. 清洁灌肠",
+            "E. 检查前憋尿"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "静脉肾盂造影前必须做碘过敏试验。检查前需排空膀胱内的尿液。静脉肾 198— 孟造影前患者应适当限水，目的是减少肾脏排泄，从而使造影剂的浓度在肾内相对增高而达 到造影效果。造影检查后为促进造影剂排泄，应增加饮水量。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q025",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。\n若检查发现结石小于2.5cm，首先考虑的治疗方案是",
+          "options": [
+            "A. 保守治疗",
+            "B. 右肾切开取石术",
+            "C. 开放手术",
+            "D. 左输尿管切开取石术",
+            "E. 体外冲击波碎石术 （4~8 题共用题干） 患者，男性，35岁。运动后突然出现右上腹部剧痛，疼痛放射至右侧中下腹部，伴恶 心、呕吐，尿液呈浓茶色。查体：腹软，右下腹部深压痛，右肾区叩击痛。"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "结石小于2.5cm 考虑的治疗方案是体外冲击波碎石术。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q026",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。\n该患者最可能的诊断是",
+          "options": [
+            "A. 十二指肠溃疡",
+            "B. 急性胆囊炎",
+            "C. 右输尿管结石",
+            "D. 急性阑尾炎",
+            "E. 右肾结石"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "该患者运动后出现血尿，同时伴有肾绞痛、右下腹部深压痛，因此考虑右 侧输尿管结石。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q027",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。\n患者来就诊时，应首先做的检查是",
+          "options": [
+            "A. 血常规",
+            "B. 尿常规",
+            "C. 肝功能检查",
+            "D. 肾功能检查",
+            "E. 腹部B超"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "一般先进行尿常规检查，之后再拍 KUB X 线平片以明确诊断。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q028",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。\n为了确诊，应做的检查是",
+          "options": [
+            "A. 尿常规",
+            "B. 血常规"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "一般先进行尿常规检查，之后再拍 KUB X 线平片以明确诊断。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q029",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。 第一章 尿路结石患者的护理 C. 腹部 CT D. KUB X线平片 E. 腹部B超\n急诊治疗的重点是",
+          "options": [
+            "A. 胃肠减压",
+            "B. 药物镇痛",
+            "C. 立即手术",
+            "D. 体外碎石",
+            "E. 应用抗生素"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "急诊治疗的重点是镇痛。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q030",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。 第一章 尿路结石患者的护理 C. 腹部 CT D. KUB X线平片 E. 腹部B超\n若X线检查发现结石大小约0.4cm，则该患者较适宜的治疗方法是",
+          "options": [
+            "A. 保守治疗",
+            "B. 输尿管切开取石",
+            "C. 输尿管肾镜取石",
+            "D. 体外冲击波碎石（ESWL）",
+            "E. 经皮肾镜取石 （9~13题共用备选答案） 患者，男性，60岁。上腹部隐痛2月余，伴肾区叩击痛，镜下血尿。B超示双肾各有 一结石，直径约0.8cm ×0.9cm。静脉肾孟造影（IVP）示肾功能正常，双侧输尿管通畅。"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "小于1cm 可保守治疗。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q031",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。 第一章 尿路结石患者的护理 C. 腹部 CT D. KUB X线平片 E. 腹部B超\n目前适宜的治疗方法是",
+          "options": [
+            "A. 中药排石",
+            "B. 多饮水",
+            "C. 体外冲击波碎石",
+            "D. 经皮肾镜取石",
+            "E. 肾切开取石"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "体外冲击波碎石：现在的碎石是在监视器下进行的，能准确击碎结石，对 直径超过0.6cm 小于2.5cm 的结石，采取碎石后，再服用药物可以促进结石排出。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q032",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。 第一章 尿路结石患者的护理 C. 腹部 CT D. KUB X线平片 E. 腹部B超\n术后患者应取的体位是",
+          "options": [
+            "A. 平卧位",
+            "B. 俯卧位",
+            "C. 患侧卧位",
+            "D. 半坐卧位",
+            "E. 头低足高位"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "手术前后护理，患侧卧位有利于减慢碎石屑的排出速度，可有效减少长 段石街的形成。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q033",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。 第一章 尿路结石患者的护理 C. 腹部 CT D. KUB X线平片 E. 腹部B超\n治疗后当天出现血尿，且有碎石排出，次日出现肾绞痛，发热，尿闭。考虑患者出现了",
+          "options": [
+            "A. 肾挫伤",
+            "B. 急性肾孟肾炎",
+            "C. 输尿管碎石梗阻",
+            "D. 急性肾小管坏死",
+            "E. 血块梗阻"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "题干给出，出现血尿，且有碎石排出，次日出现肾绞痛、发热、尿闭。 输尿管梗阻时一般都会伴有肾绞痛、发热等症状，由于结石刺激输尿管或引起输尿管梗阻而 产生肾绞痛症状，患者除表现为患侧腰腹部剧烈绞痛外，还可能伴恶心、呕吐等消化道 症状。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q034",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。 第一章 尿路结石患者的护理 C. 腹部 CT D. KUB X线平片 E. 腹部B超\n目前的处理方法是",
+          "options": [
+            "A. 补液，保证尿量",
+            "B. 应用利尿药利尿",
+            "C. 中药排石",
+            "D. 解痉镇痛",
+            "E. 手术治疗"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "梗阻是碎石术后最常见的也是最严重的并发症之一，如果梗阻得不到及 时解除可能会造成肾脏的不可逆损害，严重者会导致患肾功能部分或全部丧失。所以此时选 择手术解除梗阻。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q035",
+          "type": "single",
+          "stem": "患者，男性，40岁。反复上腹剧烈疼痛伴镜下血尿1年。右肾叩击痛，双肾肾功能 良好。 第一章 尿路结石患者的护理 C. 腹部 CT D. KUB X线平片 E. 腹部B超\n若病需再次接受 ESWL治疗，间隔时间至少为",
+          "options": [
+            "A. 3天",
+            "B. 5天",
+            "C. 7天",
+            "D. 10天",
+            "E. 2周"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "体外冲击波碎石不会对肾脏产生严重的器质性损害，但为了不给肾功能 造成一定影响，在两次体外冲击波碎石之间必须有一个间歇期，以使肾脏的损失得到一定恢 复，两次治疗间隔时间大于7天。所以选项D，10天最合适。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q036",
+          "type": "single",
+          "stem": "易在酸性尿液中形成的结石是",
+          "options": [],
+          "answer": [
+            "C"
+          ],
+          "explanation": "尿酸结石和脱复酸结石在酸性尿中形成，磷酸镁铵结石和磷酸钙结",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q037",
+          "type": "single",
+          "stem": "易在碱性尿液中形成的结石是",
+          "options": [
+            "A. 镜下血尿",
+            "B. 磷酸盐结石",
+            "C. 全程血尿",
+            "D. 黄嘌呤结石 （3~4 题共用备选答案）",
+            "E. 血红蛋白尿"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "尿酸结石和脱复酸结石在酸性尿中形成，磷酸镁铵结石和磷酸钙结",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q038",
+          "type": "single",
+          "stem": "输尿管结石，肾绞痛发作时多见",
+          "options": [],
+          "answer": [
+            "A"
+          ],
+          "explanation": "输尿管结石，肾绞痛发作时多见镜下血尿。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q039",
+          "type": "single",
+          "stem": "前尿道损伤后多见",
+          "options": [
+            "A. 预防尿酸结石",
+            "B. 肉眼血尿",
+            "C. 解除肾绞痛",
+            "D. 初期血尿 （5~9题共用备选答案）",
+            "E. 排石作用尿石症患者保守治疗中"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "前尿道损伤后多见初期血尿。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q040",
+          "type": "single",
+          "stem": "服用别嘌醇的作用是",
+          "options": [],
+          "answer": [
+            "A"
+          ],
+          "explanation": "别嘌醇是属于抑制尿酸合成的一种药物，预防尿酸结石。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q041",
+          "type": "single",
+          "stem": "服用氯化铵的作用是",
+          "options": [],
+          "answer": [
+            "B"
+          ],
+          "explanation": "口服氯化铵能酸化尿液。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q042",
+          "type": "single",
+          "stem": "应用孕酮的作用是",
+          "options": [],
+          "answer": [
+            "C"
+          ],
+          "explanation": "肾绞痛治疗：阿托品、哌替啶、吲哚美辛、孕酮等均能解痉镇痛。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q043",
+          "type": "single",
+          "stem": "口服维生素 B。的作用是",
+          "options": [],
+          "answer": [
+            "D"
+          ],
+          "explanation": "维生素 B。有减少草酸钙结晶的作用。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q044",
+          "type": "single",
+          "stem": "口服枸橡酸合剂的作用是",
+          "options": [
+            "B. 酸化尿液，预防感染性结石",
+            "D. 预防草酸结石"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "口服枸橼酸合剂的作用是预防尿酸结石。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q045",
+          "type": "multi",
+          "stem": "预防上尿路结石的措施正确的有 這！",
+          "options": [
+            "A. 少饮用牛奶",
+            "B. 少食用富含草酸的食物",
+            "C. 少吃动物蛋白",
+            "D. 多饮浓茶，以起到利尿作用，",
+            "E. 足够的饮水，保持尿量在2000ml以上品"
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          "explanation": "培养良好的饮食习惯，不食辛辣刺激性食物，禁烟酒，少饮咖啡、浓 茶，多饮凉开水，多选择高纤维植物和植物性蛋白，多食新鲜蔬菜、水果、粗粮、大豆、蜂 蜜等。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q046",
+          "type": "multi",
+          "stem": "下列有关尿路结石的叙述，正确的有天OI.Q",
+          "options": [
+            "A. 贫困国家或地区的人群中，以上尿路结石为多见 — 196 一"
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "explanation": "选项A没有理论依据。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q047",
+          "type": "multi",
+          "stem": "尿石症的病理改变是",
+          "options": [
+            "A. 尿道黏膜的损伤人我",
+            "B. 出现全身黄疸",
+            "C. 引起尿道感染",
+            "D. 导致尿路梗阻",
+            "E. 诱发鳞状上皮癌"
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "E"
+          ],
+          "explanation": "尿路结石的病理改变如下。①梗阻：尿路结石可造成梗阻，结石在各 个部位都能造成梗阻以上系统的积水。②局部损伤：较大的结石或局部粗糙的结石易造成移 行上皮的水肿、增生、溃疡，最终可诱发恶性变。③感染：最常见的是大肠埃希菌感染。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q048",
+          "type": "multi",
+          "stem": "肾与输尿管结石的治疗方法是 显A. 对症治疗",
+          "options": [
+            "B. 多饮水",
+            "C. 留置尿管",
+            "D. 保护肾功能",
+            "E. 尽量清除结石"
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D",
+            "E"
+          ],
+          "explanation": "肾与输尿管结石的治疗是采取病因治疗、非手术治疗、手术治疗等对 症治疗方法，嘱其多饮水，最大限度保护肾功能，尽量清除结石。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q049",
+          "type": "multi",
+          "stem": "肾绞痛的急诊护理要点是",
+          "options": [
+            "A. 督促快速跑步，促进结石排出",
+            "B. 监测尿量，警惕反射性无尿",
+            "C. 测量体温：注意尿路并发感染",
+            "D. 监视腹部情况，注意病情变化",
+            "E. 防止虚脱及疼痛性休克"
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "explanation": "肾绞痛的护急诊理要点：发作期患者应卧床休息，遵医嘱立即用药物 镇痛，病情较重者应输液治疗。鼓励患者大量饮水，尽可能维持每日尿量在2~3L，适当改 变体位，促进结石排出。观察尿液内是否有结石排出；结石并发感染，应注意体温和全身情 况的检查。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        },
+        {
+          "id": "p02ch01q050",
+          "type": "multi",
+          "stem": "尿路结石会引起",
+          "options": [
+            "A. 尿路梗阻",
+            "B. 尿路感染",
+            "C. 肾功能不全",
+            "D. 尿失禁",
+            "E. 癌变 1派H区 代效饼"
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          "explanation": "一般尿路结石不会导致尿失禁，但如果肾结石引起泌尿道的感染就会 间接地导致尿失禁。 200 —",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8592.png,IMG_8593.png,IMG_8594.png,IMG_8595.png"
+        }
+      ]
+    }
+  ]
+}

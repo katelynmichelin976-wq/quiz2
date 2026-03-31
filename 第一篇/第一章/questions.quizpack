@@ -1,0 +1,2277 @@
+{
+  "version": "1.0",
+  "name": "第一篇 内科护理学",
+  "exportedAt": "2026-03-31T08:57:37Z",
+  "chapters": [
+    {
+      "id": "p01ch01",
+      "name": "第一章 呼吸系统疾病患者的护理",
+      "questions": [
+        {
+          "id": "p01ch01q001",
+          "type": "single",
+          "stem": "大量咯血是指",
+          "options": [
+            "A. 24 小时略血量大于200ml",
+            "B. 24小时咯血量大于300ml",
+            "C. 24小时咯血量大于400ml",
+            "D. 24小时咯血量大于500ml",
+            "E. 24 小时咯血量大于600ml"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "略血指喉以下呼吸道或肺组织出血经口咯出。根据咯血量多少，临床分为 痰中带血、少量咯血（＜100ml/d）、中等量咯血（100~500ml/d）和大量咯血（>500ml/d 或1次300~500ml）。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q002",
+          "type": "single",
+          "stem": "下列选项中最可能出现“三凹征”的是",
+          "options": [
+            "A. 吸气性呼吸困难",
+            "B. 呼气性呼吸困难",
+            "C. 混合性呼吸困难",
+            "D. 咳嗽",
+            "E. 咳痰"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "吸气性呼吸困难特点为吸气困难，伴干咳，重者可出现吸气时胸骨上窝、锁骨上窝和肋间隙明显凹陷，即“三凹征”，主要见于急性喉炎、喉头水肿、喉癌、喉与气 管异物、气管肿瘤、气管外压性狭窄等。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q003",
+          "type": "single",
+          "stem": "下列有关呼吸系统结构和功能的描述，说法错误的是",
+          "options": [
+            "A. 胸膜腔内通常是正压",
+            "B. 上呼吸道主要起对吸入气体加温、湿化、机械拦阻的作用",
+            "C. 肺由肺循环和支气管循环进行双重血流供应",
+            "D. 喉梗阻时进行环甲膜穿刺的部位是环状软骨之上",
+            "E. 胸膜腔内负压是维持肺的扩张状态，同时也是促进胸腔内静脉血和淋巴液回流的重要 因素"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "胸膜腔内通常是负压。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q004",
+          "type": "single",
+          "stem": "为判断呼吸衰竭患者代谢紊乱情况，首选的辅助检查是",
+          "options": [
+            "A. 血常规",
+            "B. 尿常规",
+            "C. 血气分析 翠47",
+            "D. 肺功能测定",
+            "E. 血细胞涂片"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "血气分析可了解血液酸碱度、氧分压、二氧化碳分压、碱剩余等情况，有 助于判断呼吸衰竭患者代谢紊乱情况。而肺功能测定只能了解患者呼吸功能。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q005",
+          "type": "single",
+          "stem": "呼吸衰竭患者动脉血氧分压小于",
+          "options": [
+            "A. 30mmllg",
+            "B. 40mmHlg",
+            "C. 50mmlg",
+            "D. 60mmlig",
+            "E. 70mmHg"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "呼吸衰竭患者动脉血氧分压小于60mmlg。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q006",
+          "type": "single",
+          "stem": "上呼吸道由",
+          "options": [
+            "A. 气管、支气管、细支气管和肺实质构成",
+            "B. 口腔、气管、喉构成 —3-"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "上呼吸道由鼻、咽、喉构成。 7.c【解析】呼吸衰竭的诊断标准是在海平面、标准大气压、静息状态、呼吸空气条件 下，动脉血氧分压（Pa0，）＜60mmllg，伴或不伴二氧化碳分压（PaCO，）>50mmlig。单 纯的 PaO，<60mmHlg 为1型呼吸衰竭；若伴 PaCO，>50mmllg，则为I型呼吸衰竭。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P1",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q007",
+          "type": "single",
+          "stem": "诊断】型时吸使鍋的血气益新标准应建茶原翅平章一業",
+          "options": [
+            "A. pH <7.35",
+            "B. 动脉血氧含量（SaO）低于20%",
+            "C. 动脉血氧分压（PaO，）低于60mmHg",
+            "D. 动脉血二氧化碳分压（PaCO.）高于50mmHlg",
+            "E. 动脉血氧饱和度（SaPO2）低于90%"
+          ],
+          "answer": [],
+          "explanation": "",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": ""
+        },
+        {
+          "id": "p01ch01q008",
+          "type": "single",
+          "stem": "I型呼吸衰竭为保持呼吸道通畅，维持呼吸最主要措施是 Iin0OS",
+          "options": [
+            "A. 氧气吸入",
+            "B. 消除积痰",
+            "C. 给呼吸兴奋药",
+            "D. 给抗生素",
+            "E. 纠正酸中毒"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "发生I型呼吸衰竭时，为保持呼吸道通畅，首先清除滞留在口咽部的分泌 物、呕吐物。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q009",
+          "type": "single",
+          "stem": "呼吸衰竭时缺氧与二氧化碳潴留的最主要发病原理是",
+          "options": [
+            "A. 通气/血流比值失调",
+            "B. 弥散功能障碍",
+            "C. 肺泡通气量不足",
+            "D. 氧耗量增加",
+            "E. 肺内动静脉分流增加"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "发生呼吸衰竭时，缺氧和二氧化碳猪留的发生机制为通气不足。在静息时 呼吸空气，总肺泡通气量约为4L/mnin 才能维持正常的肺泡氧和二氧化碳分压。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q010",
+          "type": "single",
+          "stem": "关于慢性呼吸衰竭的患者，下列处理不利于呼吸道通畅的是",
+          "options": [
+            "A. 给予糖皮质激素",
+            "B. 采用快速利尿药",
+            "C. 口服或雾化祛痰剂",
+            "D. 痰液黏稠者补液",
+            "E. 为无力排痰者翻身拍背"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "慢性呼吸衰竭患者在氧疗和改善通气之前，必须使呼吸道保持通畅。处 第一篇内科护理学 理方法如下：①用多孔导管将分泌物或胃内反流物吸出。②痰黏稠不易咳出，用澳已新喷雾 吸人。③注入生理盐水稀释分泌物。④用支气管解痉剂扩张支气管。⑤给予肾上腺皮质激素 吸人，缓解支气管痉挛。⑥纤维支气管镜吸出分泌物。⑦经鼻气管插管或气管切开，建立人 工气道。大量应用利尿药可使痰液黏稠，气道阻力增加，不利于呼吸道通畅，所以选项B 错误。慢性呼吸衰竭处理的原则是保持呼吸道通畅条件下，改善缺 0，和纠正CO，猪留，以 及代谢功能紊乱。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q011",
+          "type": "single",
+          "stem": "呼吸衰竭治疗的主要目的是",
+          "options": [
+            "A. 控制感染",
+            "B. 纠正酸碱失衡",
+            "C. 纠正缺氧和CO，潴留",
+            "D. 纠正电解质紊乱",
+            "E. 纠正心力衰竭"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "呼吸衰竭是由于缺氧和二氧化碳潴留而引起，因此治疗的主要目的是纠 正缺氧和二氧化碳潴留。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q012",
+          "type": "single",
+          "stem": "呼吸衰竭患者最早、最突出的表现是",
+          "options": [
+            "A. 发绀",
+            "B. 血压下降",
+            "C. 心率加快",
+            "D. 呼吸困难",
+            "E. 肝肾功能损害"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "呼吸衰竭除引起呼吸衰竭的原发疾病症状、体征外，主要是缺氧和二氧 化碳潴留所致的呼吸困难和多脏器功能紊乱的表现，故最早、最突出的表现是呼吸困难。胸 闷、憋气、呼吸费力、喘息等是患者最常见的主诉。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q013",
+          "type": "single",
+          "stem": "给予呼吸衰竭患者的饮食应该是",
+          "options": [
+            "A. 高蛋白、高热量、低碳水化合物B.高蛋白、低热量、高碳水化合物",
+            "C. 高蛋白、高热量、高碳水化合物",
+            "D. 高蛋白、低热量、低碳水化合物",
+            "E. 低蛋白、低热量、低碳水化合物"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "呼吸衰竭的饮食护理：给予高蛋自、高热量、维生素丰富、低碳水化合 物、易消化的饮食，少量多餐。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q014",
+          "type": "single",
+          "stem": "下列关于呼吸衰竭时氧疗的叙述，说法错误的是",
+          "options": [
+            "A. 氧疗时保持呼吸道通畅",
+            "B. 氧疗可通过多种途径进行 —4|"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "对缺氧不伴二氧化碳潴留的氧疗为高浓度吸氧（>35%），缺氧伴明显二 氧化碳潴留的氧疗原则为低浓度（35%）持续给氧。慢性呼吸衰竭患者由于高碳酸血症， 其呼吸中枢化学感受器对9O，反应性差，呼吸的维持主要靠低氧血症对颈动脉窦、主动脉体 化学感受器的兴奋作用。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P2",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q015",
+          "type": "single",
+          "stem": "患肺炎链球菌肺炎时产生的铁锈色痰最主要的原因是",
+          "options": [
+            "A. 痰内含大量脓细胞",
+            "B. 痰内有大量红细胞",
+            "C. 白细胞破坏时产生的溶蛋白酶",
+            "D. 红细胞破坏释放出含铁血黄素",
+            "E. 红细胞碎屑被巨噬细胞吞噬"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "肺炎链球菌肺炎患者开始痰可带血丝，24~48小时后可呈铁锈色，与肺 泡内浆液渗出，红细胞、白细胞渗出，红细胞破坏释放含铁血黄素有关。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q016",
+          "type": "single",
+          "stem": "肺炎链球菌肺炎最重要的胸部体征是",
+          "options": [
+            "A. 扁平胸",
+            "B. 桶状胸",
+            "C. 胸部疱疹",
+            "D. 胸部肺实变体征",
+            "E. 胸膜摩擦音"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "師炎链球菌辦炎最重要的胸部体征是肺实变体征。肺实变时，触",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q017",
+          "type": "single",
+          "stem": "胸部触觉语颤增强见于",
+          "options": [
+            "A. 慢性支气管炎",
+            "B. 肺气肿",
+            "C. 肺源性心脏病（肺心病）",
+            "D. 肺炎链球菌肺炎",
+            "E. 胸腔积液"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "師炎链球菌辦炎最重要的胸部体征是肺实变体征。肺实变时，触",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q018",
+          "type": "single",
+          "stem": "治疗肺炎链球菌肺炎的首选抗生素是蹈",
+          "options": [
+            "A. 青霉素",
+            "B. 红霉素",
+            "C. 阿米卡星",
+            "D. 氧氟沙星",
+            "E. 羧苄西林"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肺统链辣原师炎一国诊断应立即抗生素治疗。疗程一般为5~7天。首选 药物为青莓素，所用剂量和途径视病情严重程度及有无并发症而定。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q019",
+          "type": "single",
+          "stem": "治疗肺炎链球菌肺炎，停用抗生素的指标一般是",
+          "options": [
+            "A. 症状、体征完全消失",
+            "B. 体温降至正常后3天",
+            "C. 体温降至正常后1周",
+            "D. 体温降至正常后2周",
+            "E. X线检查示炎症阴影完全消失"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "肺炎链球菌肺炎热退后继续用药3天，一般疗程7~10天。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q020",
+          "type": "single",
+          "stem": "下列关于肺炎链球菌肺炎患者的护理措施，说法错误的是",
+          "options": [
+            "A. 气急、发绀者可给子鼻导管吸氧 B.腹胀者鼓励做局部热敷或肛管排气",
+            "C. 高热者首选使用退热药",
+            "D. 进行保健指导，以防今后再次发病：胡",
+            "E. 胸痛剧烈者取患侧卧位"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "肺炎链球菌肺炎高热患者降温以逐渐降温为宜，防止虚脱，宜采用温水 擦浴、冰袋、冰帽等物理降温，不宜用退热药，以免大汗、脱水和干扰热型观察。 科21.A 【解析】支原体经口、鼻的分泌物在空气中传播，常于秋冬季节发病。患者中儿 童和背每人居乡，婆儿有回反性廊滚时应考虑文原体腩炎的可能性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q021",
+          "type": "single",
+          "stem": "支原体肺炎最常见的人群是 有E",
+          "options": [
+            "A. 儿童和青年",
+            "B. 青年和中年",
+            "C. 婴幼儿",
+            "D. 学龄前儿童",
+            "E. 老年"
+          ],
+          "answer": [],
+          "explanation": "",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": ""
+        },
+        {
+          "id": "p01ch01q022",
+          "type": "single",
+          "stem": "成人肺炎患者最常见的护理诊断是",
+          "options": [
+            "A. 体液过多",
+            "B. 体温过高",
+            "C. 心排血量减少",
+            "D. 有窒息的危险",
+            "E. 有皮肤完整性受损的危险"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "成人肺炎患者最常见的护理诊断是体温过高，与肺部感染有关。 验室检查可发现血沉增快，",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P3",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q023",
+          "type": "single",
+          "stem": "对发现活动性肺结核意义最大的是",
+          "options": [
+            "A. 咳嗽、咳痰",
+            "B. 低热.乏力、盗汗",
+            "C. 红细胞沉降率增快",
+            "D. 结核菌素试验（PPD）阳性",
+            "E. 结核患者接触史"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "活动性肺结核患者常有低热、咳嗽、消瘦、乏力、食欲峡乏等症状，实 或复发，血沉有助于观察结核病的活动性。 一般认为，结核病患者的红细胞沉降率迅速增快，提示该病活动",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q024",
+          "type": "single",
+          "stem": "结核分枝杆菌主要的传播途径是",
+          "options": [
+            "A. 消化道",
+            "B. 泌尿道",
+            "C. 生殖道",
+            "D. 呼吸道",
+            "E. 皮肤接触"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "肺结核主要通过呼吸道传择。飞沫感染是最常见的方式。传染源主要是 排磁的励结核患者，尤其是痰涂片阴性、米给治疗者。经消化道和皮肤等途径传播现已 罕见。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q025",
+          "type": "single",
+          "stem": "切断肺结核传播途径最关键的措施是",
+          "options": [
+            "A. 接种卡介苗",
+            "B. 每年进行胸部X线普查",
+            "C. 早期发现、彻底治疗肺结核患者",
+            "D. 加强卫生宣传教育",
+            "E. 对结核菌素试验阳性且与患者密切接触的家属给予药物预防"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "切断肺结核传播的最关键措施是控制传染源，也就是对于肺结核患者的 早期发现、早期治疗。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q026",
+          "type": "single",
+          "stem": "下列选项中哪项是判断肺结核有无传染性最重要的依据",
+          "options": [
+            "A. 红细胞沉降率增快",
+            "B. 结核菌素试验阳性",
+            "C. 反复痰中带血",
+            "D. 胸部X线检查有空洞",
+            "E. 痰结核菌检查阳性"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "结核菌检查是确诊肺结核病的特异依据。痰培养则更精确，且可鉴定菌 型，做药物敏感试验。痰菌阳性表明其病灶是开放性的，具有传染性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q027",
+          "type": "single",
+          "stem": "肺结核患者的全身毒性症状中有特异性的是（",
+          "options": [
+            "A. 疲乏",
+            "B. 食欲缺乏",
+            "C. 体重减轻",
+            "D. 月经失调",
+            "E. 低热、盗汗"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "肺结核患者的全身症状中发热为最常见症状，多为午后潮热，部分患者 有倦怠、乏力、盗汗、食欲缺乏和体重减轻等。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q028",
+          "type": "single",
+          "stem": "肺结核患者应做好大咯血的护理，其最主要的目的是为了避免发生",
+          "options": [
+            "A. 窒息",
+            "B. 贫血",
+            "C. 发热",
+            "D. 循环衰竭",
+            "E. 呼吸道感染"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肺结核大咯血是呼吸系统疾病的急症之一，可引起失血性休克、窒息等 而造成死亡，其中窒息是造成咯血患者死亡的主要原因，因此，对肺结核大咯血患者加强临 床观察及护理是非常重要的。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q029",
+          "type": "single",
+          "stem": "处理肺结核患者的痰液最简便、有效的方法是",
+          "options": [
+            "A. 深埋",
+            "B. 焚烧",
+            "C. 煮沸",
+            "D. 乙醇消毒",
+            "E. 等量1%消毒灵浸泡"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "结核分枝杆菌菌体成分复杂，主要是类脂质、蛋白质和多糖，其对外界 理化因素的抵抗力较强。在阴湿环境下能生存5个月以上，但在阳光下暴晒2小时，紫外线 照射30分钟即可被杀死。湿热对结核菌杀伤力强，煮沸5分钟即可杀死，所以煮沸消毒与 高压消毒是最有效的消毒法。70%乙醇接触2分钟亦可杀菌。将痰吐在纸上直接焚烧是最简 易的灭菌方法。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q030",
+          "type": "single",
+          "stem": "成人继发性肺结核中最常见的是",
+          "options": [
+            "A. 原发型肺结核",
+            "B. 浸润型肺结核",
+            "C. 结核性胸膜炎",
+            "D. 血行播散型肺结核",
+            "E. 慢性纤维空洞型肺结核"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "浸润型肺结核是肺结核中最常见的一种类型，多见于成年患者。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q031",
+          "type": "single",
+          "stem": "下列关于结核菌素试验结果的描述，说法正确的是",
+          "options": [
+            "A. 凡是结核菌素试验阴性都可以排除结核 161"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "成人结素试验阳性反应仅表示接种过卡介苗或受过结核菌感染，并不 表示一定患病；结素试验阴性说明机体没有结核菌感染，还见于下列情况：①初染结核 菌4~8周内，机体内变态反应尚未完全建立。②严重结核病和危重患者，由于免疫力下降 和变态反应暂时受抑制，结核菌素试验可暂时呈阴性，待病情好转可转为阳性。③机体免疫 功能低下或受抑制时，如应用糖皮质激素、免疫抑制剂者，肿瘤及营养不良和老年体弱者结 核菌素反应可暂时消失，亦可表现为阴性；老年人结核菌素反应也常为阴性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P4",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q032",
+          "type": "single",
+          "stem": "下列选项中最常见的肺癌病理分型是",
+          "options": [
+            "A. 腺癌",
+            "B. 大细胞未分化癌",
+            "C. 小细胞未分化癌",
+            "D. 鳞状上皮细胞癌",
+            "E. 细支气管肺泡癌"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "鳞状上皮细胞癌占肺癌40%以上，是最常见的肺癌病理分型。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q033",
+          "type": "single",
+          "stem": "支气管肺癌最常见的早期症状是",
+          "options": [
+            "A. 胸痛",
+            "B. 发热",
+            "C. 阵发性刺激性干咳",
+            "D. 持续性痰中带血",
+            "E. 胸闷、气急"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "咳嗽为肺癌最常见的临床症状，60%的患者以咳嗽为首发症状，80%患 者有咳嗽症状。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q034",
+          "type": "single",
+          "stem": "周围型肺癌最常见的组织学类型是",
+          "options": [
+            "A. 鳞状上皮癌",
+            "B. 肺泡细胞癌",
+            "C. 腺癌",
+            "D. 未分化癌 可烈参区",
+            "E. 转移癌"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "腺癌占肺癌的25%~30%。大多数腺癌是周围型，肿块直径多在4cm 以上。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q035",
+          "type": "single",
+          "stem": "肺癌大多起源于",
+          "options": [
+            "A. 肺毛细血管",
+            "B. 肺小动脉",
+            "C. 肺小静脉",
+            "D. 支气管黏膜上皮",
+            "E. 支气管软骨"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "肺癌绝大多数起源于支气管黏膜上皮，极少来自肺泡上皮，因而肺癌主 要为支气管肺癌。肺癌的分布情况为右肺多于左肺，上叶多于下。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q036",
+          "type": "single",
+          "stem": "晚期肺癌患者出现一侧上险下垂，瞳孔缩小，眼球内陷，额部与胸部少汗的原因是癌 肿致",
+          "options": [
+            "A. 上腔静脉受压",
+            "B. 膈神经受压",
+            "C. 喉返神经受压",
+            "D. 交感神经受压",
+            "E. 侵犯胸膜"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "Horer 综合征表现为患侧颜面无汗和发红，患侧眼球内陷、上脸下垂、眼裂狭窄、瞳孔缩小等，常由颈及第1胸交感神经节受肿瘤侵犯或压迫所致。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q037",
+          "type": "single",
+          "stem": "不属于肺癌常见的肺外表现的是",
+          "options": [
+            "A. 骨关节痛",
+            "B. 肝大",
+            "C. 乳腺增大",
+            "D. 库欣（Cushing）综合征",
+            "E. 杵状指（趾）"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "肺外表现又称副癌综合征，是指与肺癌有关，但与肿瘤的压迫、转移以 及肿瘤的治疗均无关系的一组内分泌、神经肌肉或代谢异常的综合征。常见表现有肥大性骨 一 21— 第一篇内科护理学 关节病及由其引起的杵状指（趾）、男性乳房发育和增生性骨关节病、库欣综合征、周围神 经病变、重症肌无力和肌病等。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q038",
+          "type": "single",
+          "stem": "患者，女性，35岁。车祸致左腿开放性骨折3小时。现出现呼吸困难，考虑呼吸衰竭可 能。此时应行的检查是",
+          "options": [
+            "A. 胸腔穿刺术",
+            "B. 纤维支气管镜检查 一7—"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "考虑呼吸衰竭可能，此时应行的检查是动脉血气分析。呼吸衰竭的诊断标 准参见 AI 型题第7题解析。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P5",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q039",
+          "type": "single",
+          "stem": "某老年呼吸衰竭患者，因近日咳嗽、咳痰、气急明显，出现神志不清、发绀、多汗及皮 肤温度增高。血气分析：PaO, 50mmHg, PaCO,60mmHg。应给予",
+          "options": [
+            "A. 乙醇湿化吸氧",
+            "B. 低浓度、低流量持续吸氧",
+            "C. 低浓度、低流量间断吸氧代不豆",
+            "D. 高浓度、高流量持续吸氧",
+            "E. 高浓度、高流量间断吸氧"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "根据血气分析结果 PaO,50mmHg,PaC0,60mmHlg 可诊断为I型呼吸衰竭， 续氧和二氧化碳潴留同时存在，高碳酸血症使其呼吸中枢化学感受器对CO，反应性差，呼吸 的维持主要靠低氧血症对颈动脉窦、主动脉体化学感受器的兴奋作用。故应给予低浓度、低 流量持续吸氧。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q040",
+          "type": "single",
+          "stem": "患者，女性，65岁。患大叶性肺炎，高热、昏迷7天，7天内给予大量广谱抗生素抗感 染治疗。近日护士做口腔护理时发现其口腔黏膜破溃，创面上附着白色膜状物。该患者 最可能发生",
+          "options": [
+            "A. 无菌群失调",
+            "B. 菌群交替症",
+            "C. 原位菌群二度失调",
+            "D. 原位菌群一度失调",
+            "E. 移位菌群失调"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "该患者经大量广谱抗生素抗感染治疗，造成大部分正常菌群消失，而少数 菌种占决定性优势。依据该患者的表现可以证实白色念珠菌感染。该菌种在正常人的皮 肤、口腔、黏膜中均可检出，但并不致病。在机体抵抗力下降或适宜于真菌繁殖的时候可致 病。所以为原位菌群三度失调，又称菌群交替症。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q041",
+          "type": "single",
+          "stem": "患者，男性，25岁。因受凉后突起畏寒、发热，体温达39.2°C，左侧胸痛伴咳嗽，咳少 量铁锈色痰。胸部×线片示左中下肺野大片淡薄阴影。其最可能的诊断是",
+          "options": [
+            "A. 金黄色葡萄球菌肺炎",
+            "B. 结核性胸膜炎",
+            "C. 肺炎链球菌肺炎",
+            "D. 原发性支气管癌合并阻塞性肺炎",
+            "E. 急性原发性肺脓肿"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "肺炎链球菌肺炎典型者痰液可呈铁锈色。肺炎链球菌肺炎X线检查可见肺 病变部呈大片均匀、致密阴影，局限于一肺叶或一肺段。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q042",
+          "type": "single",
+          "stem": "患者，女性，45岁。因寒战、高热、咳嗽、胸痛来院急诊。胸透示右上肺有大片云絮状 阴影。查痰示肺炎链球菌（+）。该患者的血象是",
+          "options": [
+            "A. 中性粒细胞增多",
+            "B. 嗜酸性粒细胞增多",
+            "C. 单核细胞增多",
+            "D. 嗜碱性粒细胞增多",
+            "E. 淋巴细胞增多"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肺炎链球菌肺炎由肺炎链球菌引起，起病急骤，以高热、寒战、咳嗽、血 痰和胸痛为特征，实验室检查常可示：白细胞计数增多和中性粒细胞比例增多，伴核左移。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q043",
+          "type": "single",
+          "stem": "某肺炎患者，体质较弱，经抗感染及一般对症治疗，未有明显好转。为防止病情恶化， 应特别注意观察",
+          "options": [
+            "A. 血压变化",
+            "B. 体温变化",
+            "C. 血液白细胞计数变化",
+            "D. 肺部体征变化",
+            "E. 呼吸系统症状变化"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "对于年老、体质虚弱的肺炎患者，宜密切注意观察其神志、血压、尿量 等，防止发生感染性休克",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q044",
+          "type": "single",
+          "stem": "患儿，女，13岁。郊游后出现低热、乏力、咳嗽2周，偶有黏痰。胸部X线片示两下肺 斑点状浸润阴影。血白细胞计数9.8×10°/L。最可能的诊断是",
+          "options": [
+            "A. 念珠菌肺炎",
+            "C. 浸润型肺结核 小B. 支原体肺炎三烧！",
+            "D. 病毒性支气管炎",
+            "E. 军团菌肺炎 一8一"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "根据咳嗽、乏力、发热等症状，白细胞计数多正常或稍高，X线检查呈斑 点状浸润影，患者最可能的诊断为支原体肺炎。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P6",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q045",
+          "type": "single",
+          "stem": "患者，男性，25岁。肺门淋巴结肿大，PPD 试验 SU，硬结直径15mm，伴水疱。诊断为",
+          "options": [
+            "A. 硅沉着病",
+            "B. 肺结核",
+            "C. 结节病",
+            "D. 淋巴瘤",
+            "E. 肺癌"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "结核菌素试验是确诊肺结核病的特异依据。常取0.1ml 结核菌素稀释液在 前特 侧做皮内註射，注射后48～72小时劃皮肤硬結直径，如小于5mm 为阴性，S~9mm为 弱阴性，10~19mm 为阴性，20mm 以上或局部有水疱、坏死为强阳性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q046",
+          "type": "single",
+          "stem": "患者，女性，45岁。近2个月来低热！咳嗽、咳痰、消瘦。X线检查示上肺有炎症浸润 及空洞性病变。最可能是",
+          "options": [
+            "A. 肺癌 鋪甲苯基？",
+            "B. 肺脓肿",
+            "C. 肺结核 菜十 D. 肺大疱并发感染",
+            "E. 肺囊肿并发感染"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "患者的低热、咳嗽、咳痰、消瘦等表现和×线片上肺有炎症浸润及空洞性 病变符合肺结核诊断。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q047",
+          "type": "single",
+          "stem": "某肺结核患者，提一重物后突然呼吸困难，随即咳大量血痰约1000ml，但突然血痰停 止，患者极度紧张，双手乱抓的原因是",
+          "options": [
+            "A. 窒息",
+            "B. 休克",
+            "C. 失血过多",
+            "D. 心脏停搏",
+            "E. 气管挛缩"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "大咯血时患者出现情绪紧张、面色灰暗、胸闷、气促、咯血不畅，往往 是窒息先兆，应引起警惕。 听诊呼吸音消失符合胸腔积液诊断。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q048",
+          "type": "single",
+          "stem": "某肺结核患者，近日左胸痛，呼吸时疼痛加重，屏气时减轻，数天后胸痛消失，但呼吸 困难越来越重，检查时发现患侧叩诊浊音，听诊呼吸音消失。可能是",
+          "options": [
+            "A. 胸腔积液",
+            "B. 胸膜肥厚",
+            "C. 胸腔积气",
+            "D. 胸壁肥厚",
+            "E. 皮下气肿"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肺结核呼吸困难乡见于于酪样肺炎和大量胸腔积液患者。且叩诊浊音、12. B 【解析】胸部 ×线检查是肺结核诊断、分型、指导治疗及了解病情变化的主要 依据。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q049",
+          "type": "single",
+          "stem": "某肺结核患者，已患病1年，因未正规治疗，故现仍有发热、咳嗽、咯血等症状。为了 解疾病情况以便对症治疗，应选择下列哪项检查",
+          "options": [
+            "A. 胸部 MRI",
+            "B. 胸部X线",
+            "C. 胸部 CT",
+            "D. 咯血量评估",
+            "E. 胸部磁共振成像"
+          ],
+          "answer": [],
+          "explanation": "",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": ""
+        },
+        {
+          "id": "p01ch01q050",
+          "type": "single",
+          "stem": "患者，男性，25岁。低热、消瘦，偶有轻咳2月余就诊。结核菌素试验72小时测量硬 结直径20mm ×22mm（强阳性）。下列处理合理的是",
+          "options": [
+            "A. 试验性抗结核病治疗",
+            "B. 结核病诊断成立，立即开始抗结核病治疗",
+            "C. 提示结核病可能，应进一步寻找病灶",
+            "D. 试验性联合抗生素和抗结核治疗 E，试验性抗感染治疗，若无效则改抗结核病治疗"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "肺结核菌素试验：注射后48~72小时测皮肤硬结直径，20mm 以上或局 一22— 部有水疱、坏死为强阳性。成人结核菌素试验阳性反应仅表示接种过卡介苗或受过结核菌感 染，并不表示一定患病。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q051",
+          "type": "single",
+          "stem": "某肺结核患者，48岁，7天前开始咳嗽，痰中带血。上午突然大口咯血，量约100ml， 查体未见异常。ECC II、皿、aVF 导联ST段下移>0.5mY，T波低平。下列对其治疗错",
+          "options": [],
+          "answer": [
+            "E"
+          ],
+          "explanation": "垂体后叶素可收缩小动脉，减少肺血流量，从而減轻咯血。因引",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P7",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q052",
+          "type": "single",
+          "stem": "思者，女性，29岁。已妊娠5个月。突然大咯血，胸部×线片示右止浸润型肺结核。下 列哪种药不能使用",
+          "options": [
+            "A. 肾上腺色腙",
+            "B. 对氨甲基苯甲酸",
+            "C. 6-氨基己酸",
+            "D. 垂体后叶素",
+            "E. 普鲁卡因"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "垂体后叶素可收缩小动脉，减少肺血流量，从而減轻咯血。因引",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P8",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q053",
+          "type": "single",
+          "stem": "思者，男性，63岁。肺癌晚期，身心非常痛苦，表现为悲伤、消沉、绝望。此患者对其 疾病的心理反应属于",
+          "options": [
+            "A. 否认阶段",
+            "B. 愤怒阶段",
+            "C. 协议阶段",
+            "D. 抑郁阶段",
+            "E. 接受阶段"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "患者肺癌晚期，身心非常痛苦，表现为悲伤、消沉、绝望。此患者对其 疾病的心理反应属于抑郁阶段。抑郁期：经过一段时间的治疗后，患者的病情毫无改善，思 者会意识到疾病已不可救药，生命已走到了尽头，极为沮丧和绝望，陷人极度抑郁情绪中。 资料表明75%的住院癌症患者有抑郁现象。患者常表现为被动、少活动、情绪低沉、沉默 不语及行为退缩。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P8",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q054",
+          "type": "single",
+          "stem": "患者，女性，50岁。肺癌术后化疗，当血自细胞计数降至3×10°/L，首先要",
+          "options": [
+            "A. 少量输血",
+            "B. 用生血药",
+            "C. 停用抗癌药",
+            "D. 减少抗癌药量",
+            "E. 加强营养"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "化疗药有抑制骨髓造血功能，可导致血细胞减少，若白细胞过低可导致 患者容易感染，当血白细胞计数降至3×10°/L应及时停药。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P8",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q055",
+          "type": "single",
+          "stem": "患者，男性，60岁。因咳嗽、咯血1月余就诊。经X线检查拟诊为右下叶中心性肺癌， 痰病理细胞学检查阴性。进一步检查应首选",
+          "options": [
+            "A. 胸部 CT",
+            "B. 胸部放射性核素扫描",
+            "C. 胸部 MRI",
+            "D. 纤维支气管镜检查",
+            "E. 经皮穿刺肺活检"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "纤维支气管镜管径细，可弯曲，易插人段支气管和亚段支气管，直接观 察肿块，并且能够取得病理组织进行活检，还能直接对病灶进行处理，纤维支气管镜检查已 成为确诊肺癌最重要的手段。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P8",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q056",
+          "type": "single",
+          "stem": "某呼吸衰竭患者，应用辅助呼吸和呼吸兴奋药过程中，出现恶心、呕吐、烦躁、面颊潮 红、肌肉颤动等现象应考虑",
+          "options": [
+            "A. 痰液阻塞",
+            "B. 肺性脑病先兆",
+            "C. 通气量不足",
+            "D. 呼吸兴奋药过量",
+            "E. 呼吸性碱中毒"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "此题考查呼吸兴奋药过量反应。呼吸衰竭患者在应用辅助呼吸和呼吸兴 奋药过程中，出现恶心、呕吐、烦躁、面颊潮红、肌肉颤动等现象，应考虑呼吸兴奋药 过量。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P8",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q057",
+          "type": "single",
+          "stem": "患者，女性，72 岁。有慢性阻塞性肺气肿病史。咳嗽、咳脓痰伴气急加重2周，今晨 神志恍惚。查体：嗜睡，口層发绀，两肺底湿啰音，心率116次/分，血压185/105mmHlgo OO 第一章 呼吸系统疾病患者的护理\n该患者最可能的诊断是",
+          "options": [
+            "A. 高血压危象",
+            "C. 脑血管意外",
+            "E. 呼吸衰竭"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "慢性阻塞性肺气肿病患者常在感染后出现咳嗽、咳痰、气急症",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P9",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q058",
+          "type": "single",
+          "stem": "患者，女性，32岁。自感低热、乏力、食欲缺乏，有盗汗、体重下降、呼吸困难、胸 痛等表现，就医诊断为浸润型肺结核，收人院抗结核治疗。\n人院后应采用的隔离种类为",
+          "options": [
+            "A. 严密隔离",
+            "B. 消化道隔离",
+            "C. 呼吸道隔离",
+            "D. 保护性隔离",
+            "E. 接触性隔离"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "慢性阻塞性肺气肿病患者常在感染后出现咳嗽、咳痰、气急症",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P15",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q059",
+          "type": "single",
+          "stem": "患者，女性，72 岁。有慢性阻塞性肺气肿病史。咳嗽、咳脓痰伴气急加重2周，今晨 神志恍惚。查体：嗜睡，口層发绀，两肺底湿啰音，心率116次/分，血压185/105mmHlgo OO 第一章 呼吸系统疾病患者的护理\n为明确诊断还需做哪项检查",
+          "options": [
+            "A. 胸部 CT",
+            "C. 心电图",
+            "E. 脑电图"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "慢性阻塞性肺气肿病患者常在感染后出现咳嗽、咳痰、气急症",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P9",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q060",
+          "type": "single",
+          "stem": "患者，女性，32岁。自感低热、乏力、食欲缺乏，有盗汗、体重下降、呼吸困难、胸 痛等表现，就医诊断为浸润型肺结核，收人院抗结核治疗。\n浸润型肺结核与慢性纤维空洞型肺结核分型的依据是",
+          "options": [
+            "A. 红细胞沉降率",
+            "B. 胸部X线片改变",
+            "C. 肺实变体征",
+            "D. 结核中毒症状",
+            "E. 痰菌检查"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "慢性阻塞性肺气肿病患者常在感染后出现咳嗽、咳痰、气急症",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P15",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q061",
+          "type": "single",
+          "stem": "患者，女性，72 岁。有慢性阻塞性肺气肿病史。咳嗽、咳脓痰伴气急加重2周，今晨 神志恍惚。查体：嗜睡，口層发绀，两肺底湿啰音，心率116次/分，血压185/105mmHlgo OO 第一章 呼吸系统疾病患者的护理\n此时最主要的治疗在于",
+          "options": [
+            "A. 使用抗生素",
+            "B. 用降压药",
+            "C. 纠正缺氧和二氧化碳潴留",
+            "D. 用利尿药",
+            "E. 去除诱因 （4~6 题共用题干） 患者，男性，70岁。慢性咳嗽、咳痰20年余，近5年来活动后气急，1周前感冒后痰 多，气急加剧，近2天嗜睡。化验：WBC 18.6×10°/L，中性粒细胞0.9，动脉血 PH 7.29， Pa0,48mmHlg,PaCO,80mmHlg。 （0日"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "慢性阻塞性肺气肿病患者常在感染后出现咳嗽、咳痰、气急症",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P9",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q062",
+          "type": "single",
+          "stem": "患者，女性，32岁。自感低热、乏力、食欲缺乏，有盗汗、体重下降、呼吸困难、胸 痛等表现，就医诊断为浸润型肺结核，收人院抗结核治疗。\n下列关于疾病防治及护理措施，正确的有",
+          "options": [
+            "A. 给予异烟肼、链霉素治疗",
+            "B. 病室通向走廊的窗户需关闭",
+            "C. 患者痰液用20% 漂白粉溶液搅拌静置2小时后倒掉",
+            "D. 病室每日用紫外线照射进行空气消毒",
+            "E. 护士在病房里不密切接触患者时，可不戴口罩"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "慢性阻塞性肺气肿病患者常在感染后出现咳嗽、咳痰、气急症",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P15",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q063",
+          "type": "single",
+          "stem": "患者，女性，72 岁。有慢性阻塞性肺气肿病史。咳嗽、咳脓痰伴气急加重2周，今晨 神志恍惚。查体：嗜睡，口層发绀，两肺底湿啰音，心率116次/分，血压185/105mmHlgo OO 第一章 呼吸系统疾病患者的护理\n该患者目前的诊断",
+          "options": [
+            "A. I型呼吸衰竭",
+            "B. II型呼吸衰竭",
+            "C. 呼吸窘迫综合征",
+            "D. 支气管哮喘急性发作",
+            "E. 脑血管意外"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "根据动脉血气分析结果判断，该患者目前出现了I型呼吸衰竭。参见AI 型题第7题解析。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P9",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q064",
+          "type": "single",
+          "stem": "患者，女性，32岁。自感低热、乏力、食欲缺乏，有盗汗、体重下降、呼吸困难、胸 痛等表现，就医诊断为浸润型肺结核，收人院抗结核治疗。\n该患者入院后第3天突然出现喷射性大咯血，继而突然中断，表情恐怖，大汗淋漓。此 时首要的处理措施是",
+          "options": [
+            "A. 加压给氧",
+            "B. 立即气管插管",
+            "C. 立即取半卧位",
+            "D. 人工呼吸 E，保持呼吸道通畅，清除血块"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "根据动脉血气分析结果判断，该患者目前出现了I型呼吸衰竭。参见AI 型题第7题解析。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P15",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q065",
+          "type": "single",
+          "stem": "患者，女性，72 岁。有慢性阻塞性肺气肿病史。咳嗽、咳脓痰伴气急加重2周，今晨 神志恍惚。查体：嗜睡，口層发绀，两肺底湿啰音，心率116次/分，血压185/105mmHlgo OO 第一章 呼吸系统疾病患者的护理\n如患者出现头痛、头胀、神志恍惚、躁狂、谵语等，应考虑",
+          "options": [
+            "A. 呼吸性酸中毒",
+            "B. 肺性脑病",
+            "C. 窒息先兆",
+            "D. 休克早期",
+            "E. 脑疝出现"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "该患者表现出精神神经症状，结合病史、实验室检查考虑为肺性脑病。肺 性脑病表现：神志淡漠，甚至谵妄、间歇抽搐、扑翼样震颤、视神经盘水肿、昏睡、昏迷 等，重者可因肺水肿、脑疝、累及脑干时抑制呼吸而死亡。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P9",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q066",
+          "type": "single",
+          "stem": "患者，女性，32岁。自感低热、乏力、食欲缺乏，有盗汗、体重下降、呼吸困难、胸 痛等表现，就医诊断为浸润型肺结核，收人院抗结核治疗。\n对肺结核患者的健康指导最重要的是",
+          "options": [
+            "A. 加强营养，保证心身休息",
+            "B. 保持乐观情绪和治疗信心",
+            "C. 按医嘱规则服药，坚持疗程",
+            "D. 尽可能与家人分室或分床就寝",
+            "E. 定期复查，根据病情调整治疗方案"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "该患者表现出精神神经症状，结合病史、实验室检查考虑为肺性脑病。肺 性脑病表现：神志淡漠，甚至谵妄、间歇抽搐、扑翼样震颤、视神经盘水肿、昏睡、昏迷 等，重者可因肺水肿、脑疝、累及脑干时抑制呼吸而死亡。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P15",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q067",
+          "type": "single",
+          "stem": "患者，女性，72 岁。有慢性阻塞性肺气肿病史。咳嗽、咳脓痰伴气急加重2周，今晨 神志恍惚。查体：嗜睡，口層发绀，两肺底湿啰音，心率116次/分，血压185/105mmHlgo OO 第一章 呼吸系统疾病患者的护理\n若经药物治疗无效，患者自主呼吸停止，应立即给予",
+          "options": [
+            "A. 经口气管插管",
+            "B. 气管切开",
+            "C. 无创机械通气",
+            "D. 高浓度吸氧",
+            "E. 体外心脏按压"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "若自主呼吸停止则应立即采取措施开放气道，并在气道通畅的基础上给予 氧疗、机械通气等。临床常用的开放气道的措施有气管插管和气管切开等，急救时常采用经 口气管插管，以迅速开放气道。 —23- 第一篇 內科护理学C",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P9",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q068",
+          "type": "single",
+          "stem": "患者，男性，25岁。近一个半月来干咳伴低热，自觉乏力。听诊右锁骨下区有固定的 湿啰音。怀疑其为肺结核。 一17- 第一篇 内科护理学 II十十十十+十十+\n为进一步确诊，最重要的检查是",
+          "options": [
+            "A. 痰菌检查",
+            "B. 胸部CT",
+            "C. 支气管碘油造影",
+            "D. 痰细胞学检查",
+            "E. 纤维支气管镜检查"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "若自主呼吸停止则应立即采取措施开放气道，并在气道通畅的基础上给予 氧疗、机械通气等。临床常用的开放气道的措施有气管插管和气管切开等，急救时常采用经 口气管插管，以迅速开放气道。 —23- 第一篇 內科护理学C",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P16",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q069",
+          "type": "single",
+          "stem": "患者，男性，25岁。因突然畏寒、发热伴右胸部疼痛1天入院。胸部×线透视，见右 中肺有大片浅淡的阴影。住院后经青霉素肌内注射，3天后体温已接近正常，患者有轻度咳 嗽，咳痰，稍感憋气。 —11一 第一篇 內科护理学口C •—十十\n该患者最可能的诊断是",
+          "options": [
+            "A. 肺炎链球菌肺炎",
+            "C. 肺炎克雷伯菌肺炎",
+            "E. 肺结核"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "根据患者的病史、临床表现、辅助检查及治疗情况可判断患有肺炎链球菌 肺炎。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P10",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q070",
+          "type": "single",
+          "stem": "患者，男性，25岁。近一个半月来干咳伴低热，自觉乏力。听诊右锁骨下区有固定的 湿啰音。怀疑其为肺结核。 一17- 第一篇 内科护理学 II十十十十+十十+\n如确诊，下列护理措施中正确的是",
+          "options": [
+            "A. 室内空气新鲜",
+            "B. 及时做好消毒隔离",
+            "C. 向患者做有关疾病知识的宣传教育D. 给予高热量、高维生素、高蛋白饮食",
+            "E. 鼓励患者多做身体锻炼，增强抗病能力"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "根据患者的病史、临床表现、辅助检查及治疗情况可判断患有肺炎链球菌 肺炎。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P16",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q071",
+          "type": "single",
+          "stem": "患者，男性，25岁。因突然畏寒、发热伴右胸部疼痛1天入院。胸部×线透视，见右 中肺有大片浅淡的阴影。住院后经青霉素肌内注射，3天后体温已接近正常，患者有轻度咳 嗽，咳痰，稍感憋气。 —11一 第一篇 內科护理学口C •—十十\n目前对该患者的主要护理措施哪项不妥",
+          "options": [
+            "A. 卧床休息，适当起来活动",
+            "B. 肺炎支原体肺炎",
+            "C. 应用解热镇痛药",
+            "D. 应用祛痰镇咳药",
+            "E. 遵医嘱继续使用抗生素 当 B. 必要时氧气吸人 林代产血利"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "肺炎链球菌肺炎治疗时禁用镇静药，避免抑制呼吸，不宜用退热药，以免 造成大汗、脱水和干扰热型观察。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P10",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q072",
+          "type": "single",
+          "stem": "患者，男性，25岁。近一个半月来干咳伴低热，自觉乏力。听诊右锁骨下区有固定的 湿啰音。怀疑其为肺结核。 一17- 第一篇 内科护理学 II十十十十+十十+\n患者在治疗过程中，判断结核化疗效果，最重要的指标是",
+          "options": [
+            "A. 病灶吸收好转",
+            "B. 体温恢复正常",
+            "C. 痰结核菌转阴",
+            "D. OT 转阴",
+            "E. ESR 恢复正常"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "肺炎链球菌肺炎治疗时禁用镇静药，避免抑制呼吸，不宜用退热药，以免 造成大汗、脱水和干扰热型观察。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P16",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q073",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。\n关于 PPD结果的判断，下列哪项是正确的",
+          "options": [
+            "A. 局部有水疱为阳性",
+            "B. 硬结直径≤5mm 为阳性",
+            "C. 硬结直径≥5mm 为阳性",
+            "D. 硬结直径≤10mm 为阳性",
+            "E. 硬结直径≥10mm 为阳性"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "结核菌素试验：因旧结核菌素是结核菌的代谢产物，主要成分为结核蛋 白，敞抗原不纯可引起非特异反应。目前多采用结核菌素的纯蛋白衍生物（纯结核菌素， PPD），常取0.1ml 结核菌素稀释液在前臂掌侧做皮内注射，注射后48~72小时测皮肤硬结 直径，如小于5mm为阴性，5~9mm 为弱阳性，10~19mm 为阳性，20mm 以上或局部有水 疱、坏死为强阳性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P10",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q074",
+          "type": "single",
+          "stem": "患者，男性，65岁。确诊为原发性支气管肺癌。为手术治疗入院。\n护士对该患者进行评估时，发现下列哪项因素与该患者患肺癌关系最密切",
+          "options": [
+            "A. 体重过重",
+            "B. 吸烟30年",
+            "C. 嗜酒",
+            "D. 糖尿病病史8年",
+            "E. 高血压家族遗传史"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "结核菌素试验：因旧结核菌素是结核菌的代谢产物，主要成分为结核蛋 白，敞抗原不纯可引起非特异反应。目前多采用结核菌素的纯蛋白衍生物（纯结核菌素， PPD），常取0.1ml 结核菌素稀释液在前臂掌侧做皮内注射，注射后48~72小时测皮肤硬结 直径，如小于5mm为阴性，5~9mm 为弱阳性，10~19mm 为阳性，20mm 以上或局部有水 疱、坏死为强阳性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P16",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q075",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。\n该患者3个小时前突然咯鲜血400ml，该患者目前危及生命的护理问题是",
+          "options": [
+            "A. 气体交换受损",
+            "B. 营养失调",
+            "C. 知识缺乏",
+            "D. 潜在并发症：休克",
+            "E. 潜在并发症：窒息"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "患者突然咯血 400ml，危及生命的护理问题是窒息。大咯血时患者出现情 绪紧张、面色灰暗、胸闷、气促、咯血不畅，往往是窒息先兆，应引起警惕。咯血时注意患 者呼吸次数、深度、节律、有无呼吸困难，两侧呼吸音有无改变，还要注意观察患者有无面 色、脉搏、心律、神志等情况变化。指导患者咯血时勿屏气，以免诱发喉头痉挛，血液引流 不畅形成血块，导致窒息。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P10",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q076",
+          "type": "single",
+          "stem": "患者，男性，65岁。确诊为原发性支气管肺癌。为手术治疗入院。\n护士收集资料时发现该患者第1次就诊是因为他意识到原发性肺癌的早期症状，他注意 到自己常",
+          "options": [
+            "A. 干咳",
+            "B. 全身不适",
+            "C. 贫血 D．胸部疼痛",
+            "E. 呼吸困难"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "患者突然咯血 400ml，危及生命的护理问题是窒息。大咯血时患者出现情 绪紧张、面色灰暗、胸闷、气促、咯血不畅，往往是窒息先兆，应引起警惕。咯血时注意患 者呼吸次数、深度、节律、有无呼吸困难，两侧呼吸音有无改变，还要注意观察患者有无面 色、脉搏、心律、神志等情况变化。指导患者咯血时勿屏气，以免诱发喉头痉挛，血液引流 不畅形成血块，导致窒息。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P16",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q077",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。\n下列哪项是首要的抢救措施",
+          "options": [
+            "A. 给予镇静药",
+            "B. 高流量吸氧",
+            "C. 输血",
+            "D. 清理呼吸道，保持呼吸道通畅",
+            "E. 使用止血药 （12~14 题共用题干） 患者，男性，25 岁。诊断为右上肺没润型肺结核空洞患者，3小时前突然大咯血不止。"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "如有窒息征象，立即取头低足高体位，轻拍背部，迅速排除在气道和口 咽部的血块，必要时用机械吸引，并做好气管插管、气管切开等准备，以解除呼吸道阻塞。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P10",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q078",
+          "type": "single",
+          "stem": "患者，男性，65岁。确诊为原发性支气管肺癌。为手术治疗入院。\n护土采集该患者的痰标本做细胞学检查，目的是为了确定痰中是否有",
+          "options": [
+            "A. 致病菌",
+            "B. 红细胞",
+            "C. 白细胞",
+            "D. 癌细胞",
+            "E. 黏液管型"
+          ],
+          "answer": [
+            "D"
+          ],
+          "explanation": "如有窒息征象，立即取头低足高体位，轻拍背部，迅速排除在气道和口 咽部的血块，必要时用机械吸引，并做好气管插管、气管切开等准备，以解除呼吸道阻塞。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P16",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q079",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。\n其治疗措施应为",
+          "options": [
+            "A. 应用镇静药",
+            "B. 输血、输液",
+            "C. 应用呼吸兴奋药",
+            "D. 高浓度吸氧",
+            "E. 应用垂体后叶素"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "垂体后叶素可收缩小动脉，减少肺血流量，从而减轻咯血。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P10",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q080",
+          "type": "single",
+          "stem": "患者，男性，65岁。确诊为原发性支气管肺癌。为手术治疗入院。\n护士对该患者进行术前护理中，正确的有",
+          "options": [
+            "A. 鼓励戒烟",
+            "B. 让患者卧床休息，减少活动",
+            "C. 倾听患者对手术的忧虑",
+            "D. 介绍手术和术后情况",
+            "E. 提供高蛋白、高热量、高维生素饮食"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "垂体后叶素可收缩小动脉，减少肺血流量，从而减轻咯血。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P16",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q081",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。\n护士护理时应协助其采取",
+          "options": [
+            "A. 健侧卧位",
+            "B. 患侧卧位 — 12-"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "无论咯血量多少，一定要保持好体位，以侧卧位为宜，避免仰卧位，半 坐或坐位等，以便出血能迅速、顺利地耕出体外，预防或解除气道阻塞，防止窒息发生。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P10",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q082",
+          "type": "single",
+          "stem": "患者，男性，65岁。确诊为原发性支气管肺癌。为手术治疗入院。\n该患者行的是右肺歸叶切除术。术后第2天，血压平稳应取哪种体位适宜",
+          "options": [
+            "A. 患侧卧位",
+            "B. 头低足高位 一 18-"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "无论咯血量多少，一定要保持好体位，以侧卧位为宜，避免仰卧位，半 坐或坐位等，以便出血能迅速、顺利地耕出体外，预防或解除气道阻塞，防止窒息发生。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P16",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q083",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。 1口口 第一章 呼吸系统疾病患者的护理 C.坐位 E.平卧位\n该患者护理的关键措施是",
+          "options": [
+            "A. 消除心理不良因素",
+            "B. 保持呼吸道通畅，防止窒息",
+            "C. 减少活动，保持安静",
+            "D. 准备好急救药品和器械",
+            "E. 做镇静、镇咳等对症处理 （15~16 题共用题干） 央型肺癌。 患者，男性，50岁。咳嗽、咯血伴右侧胸痛3周就诊。临床和影像学诊断为右下叶中 （黎答数資鼠共"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "咯血患者的护理关键是保持呼吸道通畅，防止窒息。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P11",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q084",
+          "type": "single",
+          "stem": "患者，男性，65岁。确诊为原发性支气管肺癌。为手术治疗入院。 O口第一章 呼吸系统疾病患者的护理 D. 半坐卧位，床头拾高30°~45° C. 健侧卧位 E. 平卧\n护士挤压该患者的胸腔引流管的目的是",
+          "options": [
+            "A. 预防感染",
+            "B. 防止引流管打折",
+            "C. 防止引流液倒流",
+            "D. 重建胸腔负压",
+            "E. 保持引流管通畅"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "咯血患者的护理关键是保持呼吸道通畅，防止窒息。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P17",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q085",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。 1口口 第一章 呼吸系统疾病患者的护理 C.坐位 E.平卧位\n该患者需进一步确定和评估的项目中最重要的应是",
+          "options": [
+            "A. 生活质量",
+            "B. 肝肾功能",
+            "C. 血细胞计数",
+            "D. 免疫状态",
+            "E. 组织学类型和分期"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "患者临床和影像学诊断为右下叶中央型肺癌，进一步检查应为痰脱落细 胞学检查以确定肿瘤的组织学类型。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P11",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q086",
+          "type": "single",
+          "stem": "患者，男性，65岁。确诊为原发性支气管肺癌。为手术治疗入院。 O口第一章 呼吸系统疾病患者的护理 D. 半坐卧位，床头拾高30°~45° C. 健侧卧位 E. 平卧\n术后第4天，胸腔引流瓶中水柱停止波动，护士判断其原因最可能是",
+          "options": [
+            "A. 水封泄漏",
+            "B. 引流管堵塞",
+            "C. 肺已重新扩张",
+            "D. 发生肺不张",
+            "E. 引流管打折"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "患者临床和影像学诊断为右下叶中央型肺癌，进一步检查应为痰脱落细 胞学检查以确定肿瘤的组织学类型。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P17",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q087",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。 1口口 第一章 呼吸系统疾病患者的护理 C.坐位 E.平卧位\n经检查确诊为小细胞肺癌，首选的治疗方法应是",
+          "options": [
+            "A. 化学治疗",
+            "B. 放射治疗",
+            "C. 生物学治疗",
+            "D. 手术治疗加术后化学治疗",
+            "E. 手术治疗 （17~19 题共用题干） 患者，男性，55岁。痰中间断带血丝3个月，渐消瘦，体弱，抗生素疗效差。胸部X 片示右肺门阴影增大及右肺中叶模糊阴影。"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "小细胞肺癌的治疗以化疗为主，也首选化疗，不首选手术治疗，可以联 合或序贯以放疗，对于不到5%的仅限于肺实质内的早期患者考虑手术治疗。局限期小细胞 肺癌以同步放化疗或化疗、放疗序贯治疗为主，同步放化疗优于序贯治疗，同步放化疗应尽 早，并应给予预防性全脑放疗，预防性全脑放疗对生存的益处显著。广泛期小细胞肺癌以化 疗为主，择期行局部或转移灶治疗。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P11",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q088",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。 1口口 第一章 呼吸系统疾病患者的护理 C.坐位 E.平卧位\n该患者最可能的诊断是",
+          "options": [
+            "A. 肺脓肿",
+            "B. 肺癌",
+            "C. 支原体肺炎",
+            "D. 浸润型肺结核",
+            "E. 肺门淋巴结结核"
+          ],
+          "answer": [
+            "B"
+          ],
+          "explanation": "中老年男性、痰中带血、消瘦，均提示患者可能患有肺癌。肺癌晚期由 于感染、疼痛等影响食欲及睡眼，肿瘤生长及其所产生的各种毒素引起身体消耗增加而导致 患者体重下降，最终形成恶病质。胸部×线片示有肺门阴影增大及右肺中叶模糊阴影符合 肺癌诊断。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P11",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q089",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。 1口口 第一章 呼吸系统疾病患者的护理 C.坐位 E.平卧位\n当患者咳嗽、咳痰时，应特别注意",
+          "options": [
+            "A. 痰的性质",
+            "C. 留痰送检 干期B.用镇咳药",
+            "D. 痰的气味",
+            "E. 保持呼吸道通畅"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "当肺癌患者咳嗽、咳痰时，应特别注意保持呼吸道通畅，以避免呼吸 抑制。 —24| 口",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P11",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q090",
+          "type": "single",
+          "stem": "患者，女性，30岁。咳嗽2个月，以干咳为主，有午后低热，月经不规律。胸部X线 片示右上肺较淡片状阴影。为明确诊断，进行了 PPD 试验。 1口口 第一章 呼吸系统疾病患者的护理 C.坐位 E.平卧位\n对该患者的下列护理措施中，不妥的是",
+          "options": [
+            "A. 控制水分",
+            "B. 预防感染",
+            "C. 急性期卧床休息",
+            "D. 注意口腔清洁",
+            "E. 病室湿度应在50%~70%"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肺癌患者应保证充足的水分摄人。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P11",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q091",
+          "type": "single",
+          "stem": "肺炎链球菌肺炎患者应给予",
+          "options": [],
+          "answer": [
+            "B"
+          ],
+          "explanation": "肺炎链球菌肺炎患者应给予2~4L/min 鼻导管给氧。1型呼吸衰竭",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q092",
+          "type": "single",
+          "stem": "I型呼吸衰竭患者应给予 （3~7题共用备选答案）",
+          "options": [
+            "A. 铁锈色痰",
+            "C. 脓臭痰",
+            "E. 粉红色乳状脓性痰（脓血痰）"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肺炎链球菌肺炎患者应给予2~4L/min 鼻导管给氧。1型呼吸衰竭",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q093",
+          "type": "single",
+          "stem": "肺炎链球菌肺炎患者咳",
+          "options": [],
+          "answer": [
+            "A"
+          ],
+          "explanation": "痰液性状随病因不同而异。肺炎链球菌肺炎患者咳铁锈",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q094",
+          "type": "single",
+          "stem": "肺炎克雷伯菌肺炎患者咳",
+          "options": [],
+          "answer": [
+            "D"
+          ],
+          "explanation": "痰液性状随病因不同而异。肺炎链球菌肺炎患者咳铁锈",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q095",
+          "type": "single",
+          "stem": "葡萄球菌肺炎患者咳",
+          "options": [],
+          "answer": [
+            "E"
+          ],
+          "explanation": "痰液性状随病因不同而异。肺炎链球菌肺炎患者咳铁锈",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q096",
+          "type": "single",
+          "stem": "铜绿假单胞菌肺炎患者咳",
+          "options": [],
+          "answer": [
+            "B"
+          ],
+          "explanation": "痰液性状随病因不同而异。肺炎链球菌肺炎患者咳铁锈",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q097",
+          "type": "single",
+          "stem": "厌氧菌感染所致肺炎患者咳 （8~9题共用备选答案）",
+          "options": [
+            "A. 红霉素",
+            "C. 青霉素",
+            "E. 糖皮质激素"
+          ],
+          "answer": [
+            "C"
+          ],
+          "explanation": "痰液性状随病因不同而异。肺炎链球菌肺炎患者咳铁锈",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q098",
+          "type": "single",
+          "stem": "肺炎链球菌肺炎治疗首选",
+          "options": [],
+          "answer": [
+            "C"
+          ],
+          "explanation": "肺炎链球菌肺炎首选青霉素。军团菌肺炎治疗首选红霉素。重症者",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q099",
+          "type": "single",
+          "stem": "军团菌肺炎治疗首选",
+          "options": [
+            "A. 病灶出现广泛纤维化",
+            "B. 蛛网膜下腔积聚大量炎性渗出物",
+            "C. 脑血管呈炎性改变",
+            "D. 两性霉素 （10~12 题共用备选答案） 悬玉眼褂",
+            "E. 病灶位于肺上叶底部、中叶或下叶上部等肺通气较大部位"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肺炎链球菌肺炎首选青霉素。军团菌肺炎治疗首选红霉素。重症者",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q100",
+          "type": "single",
+          "stem": "原发性肺结核",
+          "options": [
+            "D. 可见粟粒样结核结节，肺泡腔内少见"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "原发性肺结核结核分枝杆菌吸入肺内常在肺形成原发病灶。多见于胸膜 下，在肺上叶底部和下叶上部，以右侧多见。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q101",
+          "type": "single",
+          "stem": "急性粟粒型肺结核",
+          "options": [],
+          "answer": [
+            "D"
+          ],
+          "explanation": "急性粟粒型肺结核病理改变为灰黄色直径1~2mm 粟粒样结核结节，均 匀布满两肺，肺上部较多，位于间质，很少在肺泡腔内。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q102",
+          "type": "single",
+          "stem": "慢性纤维空洞型肺结核 —14",
+          "options": [],
+          "answer": [
+            "A"
+          ],
+          "explanation": "肺结核未及时发现或治疗不当，空洞长期不愈，空洞壁增厚，病灶出现 广泛纤维化；随机体免疫力的高低波动，病灶吸收、修复与恶化、进展交替发生，成为慢性 纤维空洞型肺结核。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P12",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q103",
+          "type": "single",
+          "stem": "肺结核可咳出",
+          "options": [],
+          "answer": [
+            "E"
+          ],
+          "explanation": "肺结核咯血多为整口鲜血或痰中带血，大血管破裂或空洞内动脉瘤破裂 时可有大咯血。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q104",
+          "type": "single",
+          "stem": "支气管肺癌可咳出",
+          "options": [
+            "A. 小于5mm",
+            "B. 大量脓痰",
+            "C. 10~19mm",
+            "D. 粉红色浆液泡沫样痰 （15~16 题共用备选答案）",
+            "E. 不足20mm，但出现水疱"
+          ],
+          "answer": [
+            "E"
+          ],
+          "explanation": "咯血或痰中带血为肺癌第二常见症状，以此为首发症状者占30%左右， 常表现为间断性或持续性、反复少量的痰中带血或少量咯血。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q105",
+          "type": "single",
+          "stem": "判断结核菌素试验为阳性，则皮肤硬结直径为",
+          "options": [],
+          "answer": [
+            "C"
+          ],
+          "explanation": "结核菌素试验：因旧结核菌素是结核菌的代谢产物，主要成分为结核蛋 白，敞抗原不纯可引起非特异反应。目前多采用结核菌素的纯蛋白衍生物（纯结核菌素， PPD），常取0.1ml 结核菌素稀释液在前臂掌侧做皮内注射，注射后48~72小时测皮肤硬结 直径，如小于5mm为阴性，5~9mm 为弱阳性，10~19mm 为阳性，20mm 以上或局部有水 疱、坏死为强阳性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q106",
+          "type": "single",
+          "stem": "判断结核菌素试验为阴性，则皮肤硬结直径内",
+          "options": [
+            "B. 5~9mm",
+            "D. 20mm及以上"
+          ],
+          "answer": [
+            "A"
+          ],
+          "explanation": "结核菌素试验：因旧结核菌素是结核菌的代谢产物，主要成分为结核蛋 白，敞抗原不纯可引起非特异反应。目前多采用结核菌素的纯蛋白衍生物（纯结核菌素， PPD），常取0.1ml 结核菌素稀释液在前臂掌侧做皮内注射，注射后48~72小时测皮肤硬结 直径，如小于5mm为阴性，5~9mm 为弱阳性，10~19mm 为阳性，20mm 以上或局部有水 疱、坏死为强阳性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q107",
+          "type": "multi",
+          "stem": "呼气性呼吸困难主要见于",
+          "options": [
+            "A. 肺炎",
+            "B. 肺气肿",
+            "C. 喉头水肿",
+            "D. 胸腔积液",
+            "E. 支气管哮喘"
+          ],
+          "answer": [
+            "B",
+            "E"
+          ],
+          "explanation": "呼气性呼吸困难一般是因为气道出现狭窄、痉挛以及肺部其他病变，引 起的呼吸困难，多见于喘息性慢性支气管炎、慢性阻塞性肺气肿，表现出的症状为呼气时间 出现延长，呼吸速率变得慢，还会有哮鸣音。支气管哮喘最主要的临床表现是反复发作性的 伴哮鸣音的呼气性呼吸困难和双肺哮鸣音、胸闷或咳嗽，可自行缓解或治疗后缓解。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q108",
+          "type": "multi",
+          "stem": "某患者以“肺气肿、I型呼吸衰竭”收入院。人院第1天晚上，因咳嗽、痰多、呼吸困 难，并对医院环境不适应而不能入睡。正确的护理措施是司飞合",
+          "options": [
+            "A. 给低流量持续吸氧",
+            "B. 给镇咳和镇静药，帮助人睡",
+            "C. 和患者一同制订白天活动计划",
+            "D. 减少夜间操作，保证患者睡眠",
+            "E. 减少白天睡眠时间和次数"
+          ],
+          "answer": [
+            "A",
+            "C",
+            "D",
+            "E"
+          ],
+          "explanation": "此题考查慢性I型呼吸衰竭患者的护理。当发生I型呼吸衰竭时，由 于二氧化碳的潴留，对中枢神经系统的作用表现为先兴奋后抑制，即早期出现烦躁、失眠等 兴奋症状，随着二氧化碳潴留的加重会逐渐出现神志淡漠、抽搐甚至昏迷等表现，即肺性脑 病。因而，对于这样一类患者应注意不可随意使用镇静安眠药，以免诱发或加重肺性脑病； 同时，该患者痰多，亦应慎用镇咳药，以免抑制咳嗽中枢，影响痰液的排出，从而加重呼吸 衰竭。 第一篇 內科护理学",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q109",
+          "type": "multi",
+          "stem": "呼吸衰竭发病机制包括",
+          "options": [
+            "A. 弥散障碍",
+            "B. 氧耗量增加",
+            "C. 肺泡通气过度",
+            "D. 肺泡通气不足",
+            "E. 通气/血流比例失调"
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D",
+            "E"
+          ],
+          "explanation": "呼吸衰竭缺氧和二氧化碳潴留发生的机制：主要为肺泡通气量不足， 通气/血流比例失调，以及气体弥散障碍、氧耗量增加。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q110",
+          "type": "multi",
+          "stem": "下列选项中属于呼吸衰竭患者气管切开后注意事项的有",
+          "options": [
+            "A. 不要让患者翻身",
+            "B. 术后护理非常重要",
+            "C. 痰多时，可反复吸痰",
+            "D. 定期放空气管套囊中的气体",
+            "E. 可用生理盐水湿化，但每日不宜多于200ml"
+          ],
+          "answer": [
+            "B",
+            "C",
+            "D"
+          ],
+          "explanation": "呼吸衰竭患者气管切开后的注意事项如下。①加强气道的湿化：a.蒸 汽加温湿化，吸入气的温度在32~36°C，不可超过40°。注意湿化罐内只能加无菌蒸馏水， 禁用生理盐水或加入药物，因为溶质不蒸发，将在罐内形成沉淀；b.直接向气管内滴人生 理盐水或蒸馏水，每次注人液体量3~5ml，每30~60分钟1次，气道湿化液每日总量为 300~500ml；.雾化吸人。定期进行翻身叩背，防止压疮，促进痰液引流。②吸痰：应及时 通过机械吸引清除气道内分泌物，吸引频率根据分泌量决定。③维持适当气囊压：气管插管 气囊压需进行持续监测并调整气囊压力。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q111",
+          "type": "multi",
+          "stem": "大叶性肺炎实变患者患侧体征有",
+          "options": [
+            "A. 听诊湿啰音",
+            "B. 呼吸运动增强 — 15-"
+          ],
+          "answer": [
+            "A",
+            "D",
+            "E"
+          ],
+          "explanation": "大叶性肺炎肺实变的典型体征如下。视诊：胸廓两侧对称，病变侧呼 吸运动减弱；触诊：气管居中，患部语颤增强；叩诊：患部星浊音或实音；听诊：患部呼吸 音减弱，可闻及支气管呼吸音，常有湿啰音，支气管语音增强。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P13",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q112",
+          "type": "multi",
+          "stem": "人体感染结核分枝杆菌后是否发病取决于",
+          "options": [
+            "A. 细菌的毒力",
+            "B. 细菌的数量",
+            "C. 患者的精神状态",
+            "D. 患者的免疫力",
+            "E. 细菌介导的变态反应"
+          ],
+          "answer": [
+            "A",
+            "B",
+            "D",
+            "E"
+          ],
+          "explanation": "人体感染结核分枝杆菌后是否发病跟患者的精神状态无直接关系。其 他选项均为相关。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P14",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q113",
+          "type": "multi",
+          "stem": "原发复合征的病理组成包括",
+          "options": [
+            "A. 肺部原发病灶",
+            "B. 胸膜炎",
+            "C. 支气管淋巴结病灶",
+            "D. 肺部空洞",
+            "E. 原发病灶至局部淋巴结之间的淋巴管炎"
+          ],
+          "answer": [
+            "A",
+            "C",
+            "E"
+          ],
+          "explanation": "原发性肺结核时，肺部原发病灶、淋巴管炎和肺门淋巴结结核称为原 发复合征，X线片表现呈哑铃状阴影，临床上症状和体征多不明显。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P14",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q114",
+          "type": "multi",
+          "stem": "肺结核患者全身毒血症状可有",
+          "options": [
+            "A. 盗汗",
+            "B. 午后低热",
+            "C. 干咳",
+            "D. 妇女月经失调",
+            "E. 疲乏"
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "E"
+          ],
+          "explanation": "全身症状：发热为最常见症状，多为午后潮热，部分患者有倦息、乏 力、盗汗、食欲缺乏和体重减轻等。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P14",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q115",
+          "type": "multi",
+          "stem": "下列抗结核药物中长期应用对肝有损害的有",
+          "options": [
+            "A. 链霉素",
+            "B. 异烟肼",
+            "C. 对氨基水杨酸",
+            "D. 利福平",
+            "E. 吡嗪酰胺"
+          ],
+          "answer": [
+            "B",
+            "D",
+            "E"
+          ],
+          "explanation": "异烟肼可有周围神经炎、中枢神经系统中毒、肝脏损害等不良反应。 利福平可有短暂性肝功能损害等不良反应。吡嗪酰胺可见高尿酸血症、关节痛、胃肠不适及 肝功能损害等不良反应。链霉素主要不良反应为第【对脑神经损害，表现为眩晕、耳鸣、耳 聋，严重者应及时停药，肾功能严重受损者不宜使用。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P14",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q116",
+          "type": "multi",
+          "stem": "下列有关结核菌素反应，说法正确的有",
+          "options": [
+            "A. 胸部 CT",
+            "B. 胸部 MRI",
+            "C. 胸部X线",
+            "D. 痰脱落细胞学检查",
+            "E. 纤维支气管镜检查"
+          ],
+          "answer": [
+            "D",
+            "E"
+          ],
+          "explanation": "结核菌素试验：因旧结核菌素是结核菌的代谢产物，主要成分为结核蛋 白，敞抗原不纯可引起非特异反应。目前多采用结核菌素的纯蛋白衍生物（纯结核菌素， PPD），常取0.1ml 结核菌素稀释液在前臂掌侧做皮内注射，注射后48~72小时测皮肤硬结 直径，如小于5mm为阴性，5~9mm 为弱阳性，10~19mm 为阳性，20mm 以上或局部有水 疱、坏死为强阳性。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P14",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q117",
+          "type": "multi",
+          "stem": "肺癌晚期患者出现剧烈疼痛，护士给予药物镇痛时应注意",
+          "options": [
+            "A. 首选口服",
+            "B. 用药应个体化",
+            "C. 按阶段给药",
+            "D. 尽量肌内注射给药",
+            "E. 鼓励患者忍耐至极限再给镇痛药"
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C"
+          ],
+          "explanation": "肺癌患者药物镇痛应按医嘱用药，遵循用药原则，把握好用药的阶 段，严格掌握用药剂量，首选口服药物，用药应个体化，密切观察病情和镇痛效果，警惕药 物不良反应的出现。",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P14",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        },
+        {
+          "id": "p01ch01q118",
+          "type": "multi",
+          "stem": "下列哪些情况要特别注意排除早期肺癌的可能",
+          "options": [
+            "A. 有长期吸烟史",
+            "B. 年龄40岁以上 一16-"
+          ],
+          "answer": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "explanation": "对40岁以上长期重度吸烟有下列情况者应怀疑肺癌，并进行有关排 - 26 — 除检查：①无明显诱因的刺激性干咳持续2~3周，治疗无效。②原有慢性肺部疾病，咳嗽 性质改变者。③持续或反复无其他原因可解释的短期内痰中带血者。④反复发作的同一部位 的肺炎。⑤原因不明的肺脓肿，无明显症状，无异物吸人史，抗炎治疗效果不佳者。◎原因 不明的四肢关节疼痛及杵状指（趾）。⑦X线示局限性肺气肿或段、叶性肺不张。⑧孤立性 圆形病灶和单侧性肺门阴影增大者。⑨原有肺结核的病灶已稳定，而形态或性质发生改变 者。10无中毒症状的胸腔积液，尤其是血性，且进行性增加者。 六、案例分析题",
+          "questionPage": "",
+          "answerPage": "",
+          "sourceQuestionImage": "P14",
+          "sourceAnswerImage": "IMG_8618.png,IMG_8619.png,IMG_8620.png,IMG_8621.png,IMG_8622.png,IMG_8623.png,IMG_8624.png,IMG_8625.png,IMG_8626.png,IMG_8627.png"
+        }
+      ]
+    }
+  ]
+}

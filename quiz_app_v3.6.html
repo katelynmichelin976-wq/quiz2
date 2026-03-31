@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="color-scheme" content="light dark">
+<title>刷题本</title>
+<!--
+  刷题本 · Quiz App
+  版本：v3.7
+  日期：2026-03-30
+  修订记录：
+    v3.7  2026-03-30  题目编号+页码显示；调试开关隐藏预置题库；解析显示模式（答错时/手动/自动）。
+    v3.6  2026-03-30  去掉打卡日历。
+    v3.5  2026-03-30  修复深色模式：声明color-scheme阻止系统覆盖，强制使用自定义变量。
+    v3.4  2026-03-30  主题提前到<head>内联执行，消除白色闪烁；深色模式细节优化。
+    v3.3  2026-03-30  深色模式配色重新设计，解决整体突兀感。
+    v3.2  2026-03-30  深色模式：跟随系统自动切换+设置页手动开关（自动/浅色/深色）。
+    v3.1  2026-03-30  去掉薄弱章节折叠区；章节卡片右侧显示1-5星（基于错误率）。
+    v3.0  2026-03-30  打卡日历（最近30天）；薄弱章节排行（前3章错误率）；统计3格。
+    v2.9  2026-03-30  自定义确认弹窗替换 confirm()，解决 iOS PWA 阻断问题。
+    v2.8  2026-03-30  修复返回首页后按钮数量/统计不刷新：goHome补调updateHomeButtons；
+                      设置页返回改为goHome；showPage补充刷新逻辑。
+    v2.7  2026-03-30  设置页加「重置所有数据」按钮（清空答题记录，保留题库）。
+    v2.6  2026-03-30  冲刺模式：按章节题量比例随机抽题，题量可设置，首页顶部入口，
+                      完成页显示各章得分分布。
+    v2.5  2026-03-30  复习=做过且未掌握（排除未做和已掌握）；整段重写两个函数消除不一致。
+    v2.4  2026-03-30  修复重练按钮数量与内页不符：doAction redo 同步改为全章所有题。
+    v2.3  2026-03-30  重练=全章所有题；复习=未掌握题；去掉首页导入入口。
+    v2.2  2026-03-30  底部按钮动态显示题目数量；整理测试脚本。
+    v2.1  2026-03-30  修复重练题目数少于错题数：errors字段兼容undefined，统一用parseInt。
+    v2.0  2026-03-30  四按钮重构（练习/易错题/重练/复习）；设置页（易错题阈值）；
+                      顶部齿轮入口。
+    v1.9  2026-03-30  首页交互重构：章节单选高亮，底部固定三按钮（练习/刷错题/重刷本章）；
+                      章节卡片简化为仅显示章节名+进度条（已做比例）。
+    v1.8  2026-03-30  题目列表抽屉（点进度文字展开/收起）；章节卡片错题快捷入口。
+    v1.7  2026-03-30  进度改为百分比显示。
+    v1.6  2026-03-30  预置数据加版本控制，强制覆盖旧数据；进度文案修正。
+    v1.5  2026-03-30  去掉选项乱序；进度改为已做/总数；预置三章测试数据。
+    v1.4  2026-03-30  首页统计改为四项：总题数/进度/错题/已掌握；修复可选链兼容性。
+    v1.3  2026-03-30  掌握判定：连续答对 CONFIG.masteryThreshold 次标记已掌握；
+                      章节列表显示掌握率；默认只刷未掌握题；错题连续答对达阈值
+                      自动移出错题本并 toast 提示；完成页新增「只刷未掌握」按钮；
+                      选项随机排列，防止记位置。
+    v1.2  2026-03-30  首页直接展示章节列表；单选点击即判断。
+    v1.1  2026-03-30  内置第一章测试题库（15题）。
+    v1.0  2026-03-29  初版。
+-->
+<script>
+// 主题提前初始化，避免白屏/闪烁
+(function() {
+  var saved = localStorage.getItem('cfg_theme') || 'auto';
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (saved === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+  // auto 模式：由 CSS @media query 接管，无需 JS 干预
+})();
+</script>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f5f0e8;
+    --surface: #fffdf7;
+    --surface2: #f0ebe0;
+    --border: #ddd5c0;
+    --text: #2c2416;
+    --text2: #7a6e5a;
+    --accent: #c0392b;
+    --accent-light: #fdecea;
+    --correct: #27ae60;
+    --correct-light: #eafaf1;
+    --wrong: #c0392b;
+    --wrong-light: #fdecea;
+    --mark: #e67e22;
+    --mark-light: #fef5e7;
+    --radius: 12px;
+    --shadow: 0 2px 12px rgba(44,36,22,0.08);
+  }
+
+  /* 深色主题变量 */
+  [data-theme="light"] {
+    color-scheme: light;
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --bg:            #0f0f0f;   /* 最深背景 */
+    --surface:       #1c1c1e;   /* 卡片背景，iOS深色风格 */
+    --surface2:      #2c2c2e;   /* 次级背景/按钮 */
+    --border:        #38383a;   /* 边框，低调 */
+    --text:          #e8e4dc;   /* 主文字，暖白，不刺眼 */
+    --text2:         #8e8e93;   /* 次级文字，iOS灰 */
+    --accent:        #d95b4a;   /* 主题红，略降饱和 */
+    --accent-light:  #2d1715;   /* 红色轻背景 */
+    --correct:       #32b46a;   /* 绿色 */
+    --correct-light: #0d2318;   /* 绿色轻背景 */
+    --wrong:         #d95b4a;   /* 错误红 */
+    --wrong-light:   #2d1715;   /* 错误轻背景 */
+    --mark:          #d4924a;   /* 标记橙 */
+    --mark-light:    #271a0a;   /* 橙色轻背景 */
+    --shadow:        0 2px 16px rgba(0,0,0,0.5);
+  }
+
+  /* 深色模式额外覆盖：冲刺区、底部按钮 */
+  [data-theme="dark"] .sprint-zone {
+    background: linear-gradient(135deg, #1a2035 0%, #0f1824 100%);
+  }
+  [data-theme="dark"] .home-footer {
+    background: #1c1c1e;
+    border-top-color: #38383a;
+  }
+  [data-theme="dark"] .btn-home-action.primary {
+    background: #d95b4a;
+  }
+  [data-theme="dark"] .btn-home-action.danger {
+    background: #2d1715;
+    border-color: #d95b4a;
+    color: #d95b4a;
+  }
+  [data-theme="dark"] .btn-home-action.secondary {
+    background: #2c2c2e;
+    border-color: #48484a;
+    color: #e8e4dc;
+  }
+  [data-theme="dark"] .btn-home-action:disabled {
+    opacity: .28;
+  }
+  [data-theme="dark"] .home-banner {
+    background: #c04535;
+  }
+  [data-theme="dark"] .topbar {
+    background: #1c1c1e;
+    border-bottom-color: #38383a;
+  }
+  [data-theme="dark"] .quiz-footer {
+    background: #1c1c1e;
+    border-top-color: #38383a;
+  }
+  [data-theme="dark"] .opt {
+    background: #1c1c1e;
+    border-color: #38383a;
+    color: #e8e4dc;
+  }
+  [data-theme="dark"] .opt.selected {
+    background: #2d1715;
+    border-color: #d95b4a;
+  }
+  [data-theme="dark"] .stem-card {
+    background: #1c1c1e;
+    border-color: #38383a;
+  }
+
+  /* 系统深色模式自动响应 */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not([data-theme="dark"]) {
+      color-scheme: dark;
+      --bg:            #0f0f0f;
+      --surface:       #1c1c1e;
+      --surface2:      #2c2c2e;
+      --border:        #38383a;
+      --text:          #e8e4dc;
+      --text2:         #8e8e93;
+      --accent:        #d95b4a;
+      --accent-light:  #2d1715;
+      --correct:       #32b46a;
+      --correct-light: #0d2318;
+      --wrong:         #d95b4a;
+      --wrong-light:   #2d1715;
+      --mark:          #d4924a;
+      --mark-light:    #271a0a;
+      --shadow:        0 2px 16px rgba(0,0,0,0.5);
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .sprint-zone {
+      background: linear-gradient(135deg, #1a2035 0%, #0f1824 100%);
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .home-footer {
+      background: #1c1c1e; border-top-color: #38383a;
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .btn-home-action.primary {
+      background: #d95b4a;
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .btn-home-action.danger {
+      background: #2d1715; border-color: #d95b4a; color: #d95b4a;
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .btn-home-action.secondary {
+      background: #2c2c2e; border-color: #48484a; color: #e8e4dc;
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .home-banner {
+      background: #c04535;
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .topbar {
+      background: #1c1c1e; border-bottom-color: #38383a;
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .quiz-footer {
+      background: #1c1c1e; border-top-color: #38383a;
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .opt {
+      background: #1c1c1e; border-color: #38383a; color: #e8e4dc;
+    }
+    :root:not([data-theme="light"]):not([data-theme="dark"]) .stem-card {
+      background: #1c1c1e; border-color: #38383a;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; user-select: none; }
+  html, body { height: 100%; background: var(--bg); color: var(--text); font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; }
+
+  .page { display: none; flex-direction: column; height: 100dvh; }
+  .page.active { display: flex; }
+
+  /* ── 顶部导航 ── */
+  .topbar {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 16px;
+    padding-top: calc(12px + env(safe-area-inset-top));
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .topbar-title { font-size: 17px; font-weight: 600; flex: 1; }
+  .topbar-center { font-size: 14px; color: var(--text2); flex: 1; text-align: center; }
+  .btn-icon {
+    width: 36px; height: 36px; border-radius: 50%; border: none;
+    background: var(--surface2); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: var(--text); flex-shrink: 0;
+    transition: background .15s;
+  }
+  .btn-icon:active { background: var(--border); }
+  .btn-mark-active { background: var(--mark-light) !important; color: var(--mark) !important; }
+
+  .scroll-area { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .scroll-area::-webkit-scrollbar { display: none; }
+  .safe-bottom { height: env(safe-area-inset-bottom); flex-shrink: 0; background: var(--surface); }
+  .safe-bg    { height: env(safe-area-inset-bottom); flex-shrink: 0; background: var(--bg); }
+
+  /* ════════════════════════════════════
+     首页（章节列表）
+  ════════════════════════════════════ */
+  .home-banner {
+    margin: 16px 16px 0;
+    background: var(--accent); border-radius: var(--radius);
+    padding: 16px 20px; color: #fff;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .home-banner h1 { font-size: 20px; font-weight: 700; }
+  .home-banner .ver { font-size: 11px; opacity: .65; margin-top: 2px; }
+
+  .stat-row { display: flex; gap: 10px; padding: 12px 16px 0; }
+  .stat-card {
+    flex: 1; background: var(--surface); border-radius: var(--radius);
+    padding: 12px; border: 1px solid var(--border);
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    cursor: pointer;
+  }
+  .stat-card:active { background: var(--surface2); }
+  .stat-card .num { font-size: 18px; font-weight: 700; }
+  .stat-card .lbl { font-size: 11px; color: var(--text2); }
+  .stat-card.s-err .num    { color: var(--wrong); }
+  .stat-card.s-master .num { color: var(--correct); }
+  .stat-card.s-mrk .num { color: var(--mark); }
+
+  .section-hd {
+    font-size: 12px; font-weight: 600; color: var(--text2);
+    letter-spacing: .5px; padding: 14px 16px 6px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .btn-import-sm {
+    font-size: 12px; color: var(--accent); background: none; border: none;
+    cursor: pointer; font-weight: 600; padding: 0; position: relative;
+  }
+
+  .chapter-list { display: flex; flex-direction: column; gap: 6px; padding: 0 16px 20px; }
+  .chapter-card {
+    background: var(--surface); border-radius: var(--radius);
+    border: 1px solid var(--border); padding: 13px 15px;
+    cursor: pointer; transition: box-shadow .15s;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .chapter-card:active { box-shadow: var(--shadow); }
+  .chapter-info { flex: 1; min-width: 0; }
+  .chapter-name { font-size: 15px; font-weight: 600; }
+  .chapter-sub  { font-size: 12px; color: var(--text2); margin-top: 3px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .c-err { color: var(--wrong); }
+  .c-mrk { color: var(--mark); }
+  .prog-bar { height: 3px; background: var(--border); border-radius: 2px; margin-top: 7px; overflow: hidden; }
+  .prog-fill { height: 100%; background: var(--correct); border-radius: 2px; }
+  .chapter-arrow { color: var(--text2); font-size: 16px; flex-shrink: 0; }
+  .chapter-card.selected {
+    border-color: var(--accent); background: var(--accent-light);
+  }
+  .chapter-card.selected .chapter-name { color: var(--accent); }
+
+  /* 首页底部固定按钮栏 */
+  .home-footer {
+    flex-shrink: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    display: flex; gap: 10px;
+  }
+  .btn-home-action {
+    flex: 1; padding: 12px 4px; border-radius: var(--radius);
+    font-size: 13px; font-weight: 600; border: none; cursor: pointer;
+    transition: opacity .15s;
+  }
+  .btn-home-action:disabled { opacity: .32; cursor: default; }
+  .btn-home-action.primary  { background: var(--accent); color: #fff; }
+  .btn-home-action.danger   { background: var(--wrong-light); color: var(--wrong); border: 1.5px solid var(--wrong); }
+  .btn-home-action.secondary{ background: var(--surface2); color: var(--text); border: 1.5px solid var(--border); }
+  .ch-err-btn {
+    flex-shrink: 0; padding: 5px 10px; border-radius: 20px;
+    background: var(--wrong-light); border: 1px solid var(--wrong);
+    color: var(--wrong); font-size: 12px; font-weight: 700; cursor: pointer;
+  }
+  .ch-err-btn:active { background: var(--wrong); color: #fff; }
+
+  .empty-tip { text-align: center; padding: 32px 20px; color: var(--text2); font-size: 14px; line-height: 1.8; }
+  .c-master { color: var(--correct); }
+  .mastered-badge {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    padding: 1px 6px; border-radius: 10px;
+    background: var(--correct-light); color: var(--correct);
+    margin-left: 6px; vertical-align: middle;
+  }
+  .result-bar.mastered { display: flex; background: #e8f5e9; color: #1b5e20; }
+
+  /* ════════════════════════════════════
+     刷题页
+  ════════════════════════════════════ */
+  #page-quiz { background: var(--bg); }
+  .quiz-prog-bar { height: 3px; background: var(--border); flex-shrink: 0; }
+  .quiz-prog-fill { height: 100%; background: var(--accent); transition: width .3s; }
+
+  .quiz-body {
+    flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    padding: 14px 16px 0; display: flex; flex-direction: column; gap: 12px;
+  }
+  .quiz-body::-webkit-scrollbar { display: none; }
+
+  .stem-card {
+    background: var(--surface); border-radius: var(--radius);
+    padding: 15px; border: 1px solid var(--border);
+    font-size: 16px; line-height: 1.75; font-weight: 500;
+  }
+  .type-badge {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    padding: 2px 8px; border-radius: 20px; margin-bottom: 8px;
+    background: var(--surface2); color: var(--text2);
+  }
+  .type-badge.multi { background: #e8f4fd; color: #2980b9; }
+
+  .opts { display: flex; flex-direction: column; gap: 7px; }
+  .opt {
+    background: var(--surface); border: 2px solid var(--border);
+    border-radius: var(--radius); padding: 13px 14px;
+    text-align: left; cursor: pointer; font-size: 15px; line-height: 1.5;
+    color: var(--text); display: flex; gap: 10px; align-items: flex-start;
+    transition: border-color .12s, background .12s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .opt .lt { font-weight: 700; flex-shrink: 0; color: var(--text2); min-width: 18px; }
+  .opt .tx { flex: 1; }
+  /* 多选hover态 */
+  .opt.selected   { border-color: var(--accent); background: var(--accent-light); }
+  .opt.selected .lt { color: var(--accent); }
+  /* 判断结果态 */
+  .opt.correct    { border-color: var(--correct); background: var(--correct-light); }
+  .opt.correct .lt { color: var(--correct); }
+  .opt.wrong-sel  { border-color: var(--wrong);   background: var(--wrong-light);   }
+  .opt.wrong-sel .lt { color: var(--wrong); }
+  .opt:disabled   { cursor: default; }
+
+  .result-bar {
+    display: none; border-radius: var(--radius); padding: 11px 15px;
+    font-size: 15px; font-weight: 600; align-items: center; gap: 8px;
+  }
+  .result-bar.ok  { display: flex; background: var(--correct-light); color: var(--correct); }
+  .result-bar.err { display: flex; background: var(--wrong-light);   color: var(--wrong);   }
+
+  .explain-block {
+    display: none; background: var(--surface2); border-radius: var(--radius);
+    padding: 13px 14px; font-size: 14px; line-height: 1.75;
+    border-left: 3px solid var(--accent);
+  }
+  .explain-block.on { display: block; }
+  .explain-hd { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 5px; }
+
+  /* 底部操作区 */
+  .quiz-footer {
+    background: var(--surface); border-top: 1px solid var(--border);
+    padding: 12px 16px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    flex-shrink: 0;
+  }
+  .btn-submit {
+    width: 100%; padding: 14px; border-radius: var(--radius);
+    background: var(--accent); color: #fff; font-size: 16px; font-weight: 600;
+    border: none; cursor: pointer;
+  }
+  .btn-submit:disabled { opacity: .35; cursor: default; }
+  .foot-row { display: flex; gap: 10px; }
+  .btn-explain {
+    flex: 1; padding: 13px; border-radius: var(--radius);
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text); font-size: 14px; font-weight: 500; cursor: pointer;
+  }
+  .btn-explain:active { background: var(--border); }
+  .btn-next {
+    flex: 2; padding: 13px; border-radius: var(--radius);
+    background: var(--text); color: #fff; font-size: 15px; font-weight: 600;
+    border: none; cursor: pointer;
+  }
+  .btn-next:active { opacity: .82; }
+
+  /* ════════════════════════════════════
+     完成页
+  ════════════════════════════════════ */
+  .done-body {
+    flex: 1; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 32px 24px; gap: 18px; text-align: center;
+  }
+  .done-icon  { font-size: 60px; }
+  .done-title { font-size: 22px; font-weight: 700; }
+  .done-score { font-size: 15px; color: var(--text2); line-height: 1.8; }
+  .done-score strong { color: var(--text); font-size: 17px; }
+  .done-acts  { display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 300px; }
+  .btn-primary {
+    padding: 14px; border-radius: var(--radius);
+    background: var(--accent); color: #fff; font-size: 16px; font-weight: 600;
+    border: none; cursor: pointer;
+  }
+  .btn-outline {
+    padding: 14px; border-radius: var(--radius);
+    background: transparent; border: 1.5px solid var(--border);
+    color: var(--text); font-size: 15px; cursor: pointer;
+  }
+  .btn-outline:active { background: var(--surface2); }
+
+  /* ── 题目列表抽屉 ── */
+  .q-drawer {
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44,36,22,.45); z-index: 100;
+    display: none; align-items: flex-start; justify-content: center;
+    padding-top: calc(56px + env(safe-area-inset-top));
+  }
+  .q-drawer.open { display: flex; }
+  .q-drawer-box {
+    background: var(--surface); border-radius: 0 0 var(--radius) var(--radius);
+    width: 100%; max-height: 60vh; overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(44,36,22,.18);
+  }
+  .q-drawer-box::-webkit-scrollbar { display: none; }
+  .q-drawer-hd {
+    padding: 12px 16px 8px; font-size: 12px; font-weight: 600;
+    color: var(--text2); letter-spacing: .4px; border-bottom: 1px solid var(--border);
+  }
+  .q-grid {
+    display: grid; grid-template-columns: repeat(6, 1fr);
+    gap: 8px; padding: 12px 16px 16px;
+  }
+  .q-dot {
+    aspect-ratio: 1; border-radius: 8px; border: 1.5px solid var(--border);
+    background: var(--surface2); display: flex; align-items: center;
+    justify-content: center; font-size: 12px; font-weight: 600;
+    color: var(--text2); cursor: pointer; transition: transform .1s;
+  }
+  .q-dot:active { transform: scale(.9); }
+  .q-dot.current { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+  .q-dot.ok      { background: var(--correct); border-color: var(--correct); color: #fff; }
+  .q-dot.err     { background: var(--wrong);   border-color: var(--wrong);   color: #fff; }
+  .q-dot.marked  { border-color: var(--mark);  color: var(--mark); }
+
+  /* ── 冲刺区域 ── */
+  .sprint-zone {
+    margin: 12px 16px 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: var(--radius); padding: 14px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    cursor: pointer; transition: opacity .15s;
+  }
+  .sprint-zone:active { opacity: .85; }
+  .sprint-left { display: flex; flex-direction: column; gap: 2px; }
+  .sprint-title { font-size: 16px; font-weight: 700; color: #fff; }
+  .sprint-sub   { font-size: 12px; color: rgba(255,255,255,.6); }
+  .sprint-btn {
+    background: #e2b96f; color: #1a1a2e;
+    padding: 8px 16px; border-radius: 20px;
+    font-size: 13px; font-weight: 700; white-space: nowrap;
+  }
+
+  /* 冲刺完成页各章分布 */
+  .ch-score-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0; border-bottom: 1px solid var(--border);
+  }
+  .ch-score-row:last-child { border-bottom: none; }
+  .ch-score-name { font-size: 13px; flex: 1; color: var(--text); }
+  .ch-score-bar-wrap { width: 80px; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .ch-score-bar-fill { height: 100%; border-radius: 3px; background: var(--correct); }
+  .ch-score-pct { font-size: 13px; font-weight: 700; color: var(--text2); min-width: 36px; text-align: right; }
+
+  /* ── 自定义确认弹窗 ── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 2000;
+    background: rgba(0,0,0,.5);
+    display: none; align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--surface); border-radius: 16px;
+    width: 100%; max-width: 320px;
+    padding: 24px 20px 16px; text-align: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,.25);
+  }
+  .modal-icon  { font-size: 36px; margin-bottom: 10px; }
+  .modal-title { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .modal-body  { font-size: 14px; color: var(--text2); line-height: 1.6; margin-bottom: 20px; }
+  .modal-btns  { display: flex; flex-direction: column; gap: 8px; }
+  .modal-btn-confirm {
+    padding: 13px; border-radius: var(--radius); border: none; cursor: pointer;
+    font-size: 15px; font-weight: 600; background: var(--wrong); color: #fff;
+  }
+  .modal-btn-cancel {
+    padding: 13px; border-radius: var(--radius); cursor: pointer;
+    font-size: 15px; background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+  }
+
+  /* ── 主题切换按钮 ── */
+  .theme-btn {
+    flex: 1; padding: 9px 4px; border-radius: var(--radius-sm, 8px);
+    border: 1.5px solid var(--border); background: var(--surface2);
+    color: var(--text2); font-size: 13px; font-weight: 500; cursor: pointer;
+    transition: border-color .15s, color .15s, background .15s;
+  }
+  .theme-btn.active {
+    border-color: var(--accent); background: var(--accent-light);
+    color: var(--accent); font-weight: 700;
+  }
+
+  /* Switch toggle (iOS style) */
+  .switch { position:relative; display:inline-block; width:44px; height:26px; flex-shrink:0; }
+  .switch input { opacity:0; width:0; height:0; }
+  .switch .slider { position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0;
+    background:var(--border); border-radius:13px; transition:.2s; }
+  .switch .slider:before { content:''; position:absolute; height:20px; width:20px;
+    left:3px; bottom:3px; background:#fff; border-radius:50%; transition:.2s; }
+  .switch input:checked + .slider { background:var(--correct); }
+  .switch input:checked + .slider:before { transform:translateX(18px); }
+
+  /* Toast */
+  .toast {
+    position: fixed; bottom: calc(90px + env(safe-area-inset-bottom));
+    left: 50%; transform: translateX(-50%) translateY(16px);
+    background: rgba(44,36,22,.88); color: #fff;
+    padding: 9px 18px; border-radius: 20px; font-size: 14px;
+    opacity: 0; transition: opacity .2s, transform .2s;
+    pointer-events: none; z-index: 999; white-space: nowrap;
+  }
+  .toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ 首页（章节列表）══════════ -->
+<div class="page active" id="page-home">
+  <div class="topbar">
+    <div class="topbar-title">刷题本</div>
+    <button class="btn-icon" onclick="showPage('page-settings')" title="设置">⚙️</button>
+  </div>
+  <div class="scroll-area">
+
+    <div class="home-banner">
+      <div>
+        <h1>刷题本</h1>
+        <div class="ver">v3.7 · 副主任护师备考</div>
+      </div>
+      <div style="font-size:34px;">📖</div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card" style="cursor:default;">
+        <div class="num" id="st-total">0</div>
+        <div class="lbl">题目</div>
+      </div>
+      <div class="stat-card" style="cursor:default;">
+        <div class="num" id="st-done">0</div>
+        <div class="lbl">进度</div>
+      </div>
+      <div class="stat-card s-err" onclick="openSpecial('errors')">
+        <div class="num" id="st-err">0</div>
+        <div class="lbl">错题</div>
+      </div>
+    </div>
+
+    <!-- 冲刺区域 -->
+    <div class="sprint-zone" onclick="startSprint()">
+      <div class="sprint-left">
+        <div class="sprint-title">⚡ 冲刺模式</div>
+        <div class="sprint-sub" id="sprint-sub">跨章节随机抽题，模拟考试</div>
+      </div>
+      <div class="sprint-btn" id="sprint-btn">开始</div>
+    </div>
+
+    <div class="section-hd"><span id="deck-label">章节</span></div>
+
+    <div class="chapter-list" id="chapter-list" style="padding-bottom:8px;"></div>
+  </div>
+
+  <!-- 底部固定按钮栏 -->
+  <div class="home-footer">
+    <button class="btn-home-action primary"   id="btn-practice"   disabled onclick="doAction('practice')">练习</button>
+    <button class="btn-home-action danger"    id="btn-hard"       disabled onclick="doAction('hard')">易错题</button>
+    <button class="btn-home-action secondary" id="btn-redo-err"   disabled onclick="doAction('redo')">重练</button>
+    <button class="btn-home-action secondary" id="btn-review-all" disabled onclick="doAction('all')">复习</button>
+  </div>
+</div>
+
+<!-- ══════════ 刷题页 ══════════ -->
+<div class="page" id="page-quiz">
+  <div class="topbar">
+    <button class="btn-icon" id="btn-back">←</button>
+    <button class="topbar-center" id="quiz-prog-txt" onclick="toggleDrawer()" style="background:none;border:none;cursor:pointer;font-size:14px;color:var(--text2);">1 / 15</button>
+    <button class="btn-icon" id="btn-mark">☆</button>
+  </div>
+  <div class="quiz-prog-bar"><div class="quiz-prog-fill" id="quiz-prog-fill"></div></div>
+
+  <!-- 题目列表抽屉 -->
+  <div class="q-drawer" id="q-drawer" onclick="closeDrawer(event)">
+    <div class="q-drawer-box" onclick="event.stopPropagation()">
+      <div class="q-drawer-hd">题目列表 · 点击跳转</div>
+      <div class="q-grid" id="q-grid"></div>
+    </div>
+  </div>
+
+  <div class="quiz-body" id="quiz-body">
+    <div class="stem-card">
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+        <div id="type-badge" class="type-badge">单选</div>
+        <div id="q-number" style="font-size:12px;color:var(--text2);font-weight:600;"></div>
+      </div>
+      <div id="stem-text"></div>
+      <div id="q-page-info" style="font-size:11px;color:var(--text2);margin-top:8px;display:none;"></div>
+    </div>
+    <div class="opts" id="opts"></div>
+    <div id="result-bar" class="result-bar"></div>
+    <div id="explain-block" class="explain-block">
+      <div class="explain-hd">【解析】</div>
+      <div id="explain-text"></div>
+    </div>
+  </div>
+
+  <div class="quiz-footer" id="quiz-footer">
+    <!-- 多选：提交按钮 -->
+    <div id="ft-submit">
+      <button class="btn-submit" id="btn-submit" disabled>提交答案</button>
+    </div>
+    <!-- 判断后：解析 + 下一题 -->
+    <div id="ft-next" style="display:none;">
+      <div class="foot-row">
+        <button class="btn-explain" id="btn-explain">查看解析</button>
+        <button class="btn-next"    id="btn-next">下一题 →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 完成页 ══════════ -->
+<div class="page" id="page-done">
+  <div class="topbar">
+    <button class="btn-icon" onclick="goHome()">←</button>
+    <div class="topbar-title">练习完成</div>
+  </div>
+  <div class="done-body">
+    <div class="done-icon"  id="done-icon">🎉</div>
+    <div class="done-title" id="done-title">完成！</div>
+    <div class="done-score" id="done-score"></div>
+    <div id="done-ch-scores" style="width:100%;max-width:320px;display:none;
+      background:var(--surface);border-radius:var(--radius);
+      border:1px solid var(--border);padding:12px 14px;margin-top:4px;"></div>
+    <div class="done-acts">
+      <button class="btn-primary" id="btn-retry-unmastered">只刷未掌握</button>
+      <button class="btn-outline" id="btn-retry-err">重刷错题</button>
+      <button class="btn-outline" id="btn-retry-all">重刷本章全部</button>
+      <button class="btn-outline" onclick="goHome()">返回首页</button>
+    </div>
+  </div>
+  <div class="safe-bg"></div>
+</div>
+
+<!-- ══════════ 设置页 ══════════ -->
+<div class="page" id="page-settings">
+  <div class="topbar">
+    <button class="btn-icon" onclick="goHome()">←</button>
+    <div class="topbar-title">设置</div>
+  </div>
+  <div class="scroll-area">
+    <div style="padding:16px;display:flex;flex-direction:column;gap:12px;">
+
+      <div style="font-size:12px;font-weight:600;color:var(--text2);letter-spacing:.5px;padding:4px 0;">外观</div>
+
+      <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:14px 16px;">
+        <div style="font-size:15px;font-weight:600;margin-bottom:10px;">深色模式</div>
+        <div style="display:flex;gap:8px;">
+          <button id="theme-auto"  onclick="setTheme('auto')"  class="theme-btn">跟随系统</button>
+          <button id="theme-light" onclick="setTheme('light')" class="theme-btn">浅色</button>
+          <button id="theme-dark"  onclick="setTheme('dark')"  class="theme-btn">深色</button>
+        </div>
+      </div>
+
+      <div style="font-size:12px;font-weight:600;color:var(--text2);letter-spacing:.5px;padding:4px 0;">刷题参数</div>
+
+      <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <div>
+            <div style="font-size:15px;font-weight:600;">易错题阈值</div>
+            <div style="font-size:12px;color:var(--text2);margin-top:2px;">错误率超过此值才纳入易错题</div>
+          </div>
+          <div style="font-size:18px;font-weight:700;color:var(--wrong);" id="threshold-val">30%</div>
+        </div>
+        <input type="range" id="threshold-slider" min="10" max="80" step="5" value="30"
+          style="width:100%;accent-color:var(--wrong);"
+          oninput="updateThreshold(this.value)">
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-top:4px;">
+          <span>10%</span><span>80%</span>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <div>
+            <div style="font-size:15px;font-weight:600;">掌握阈值</div>
+            <div style="font-size:12px;color:var(--text2);margin-top:2px;">连续答对几次视为已掌握</div>
+          </div>
+          <div style="font-size:18px;font-weight:700;color:var(--correct);" id="mastery-val">2次</div>
+        </div>
+        <input type="range" id="mastery-slider" min="1" max="5" step="1" value="2"
+          style="width:100%;accent-color:var(--correct);"
+          oninput="updateMastery(this.value)">
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-top:4px;">
+          <span>1次</span><span>5次</span>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:16px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <div>
+            <div style="font-size:15px;font-weight:600;">冲刺题量</div>
+            <div style="font-size:12px;color:var(--text2);margin-top:2px;">每次冲刺抽取的题目数量</div>
+          </div>
+          <div style="font-size:18px;font-weight:700;color:#e2b96f;" id="sprint-count-val">20题</div>
+        </div>
+        <input type="range" id="sprint-count-slider" min="10" max="50" step="5" value="20"
+          style="width:100%;accent-color:#e2b96f;"
+          oninput="updateSprintCount(this.value)">
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text2);margin-top:4px;">
+          <span>10题</span><span>50题</span>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:14px 16px;">
+        <div style="font-size:15px;font-weight:600;margin-bottom:10px;">解析显示</div>
+        <div style="display:flex;gap:8px;">
+          <button id="explain-error"  onclick="setExplainMode('error')"  class="theme-btn active">答错时</button>
+          <button id="explain-manual" onclick="setExplainMode('manual')" class="theme-btn">手动</button>
+          <button id="explain-auto"   onclick="setExplainMode('auto')"   class="theme-btn">自动</button>
+        </div>
+      </div>
+
+      <div style="font-size:12px;font-weight:600;color:var(--text2);letter-spacing:.5px;padding:4px 0;">题库管理</div>
+
+      <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);
+        padding:14px 16px;display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <div style="font-size:15px;font-weight:600;">显示内置测试题库</div>
+          <div style="font-size:12px;color:var(--text2);margin-top:2px;">关闭后首页不显示预置的测试章节</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-preset" checked onchange="togglePreset(this.checked)">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <label for="file-input" class="btn-import-sm" id="btn-import-settings"
+        style="display:block;width:100%;padding:14px;border-radius:var(--radius);
+               background:var(--surface);border:1px solid var(--border);
+               font-size:15px;color:var(--text);text-align:left;cursor:pointer;position:relative;">
+        ＋ 导入题库 (.quizpack)
+        <input type="file" id="file-input" accept=".json,.quizpack"
+          style="position:absolute;opacity:0;width:100%;height:100%;top:0;left:0;cursor:pointer;">
+      </label>
+
+      <div style="font-size:12px;font-weight:600;color:var(--text2);letter-spacing:.5px;padding:4px 0;">危险操作</div>
+      <button id="btn-reset-data" onclick="resetAllData()"
+        style="display:block;width:100%;padding:14px;border-radius:var(--radius);
+               background:#fff0f0;border:1.5px solid var(--wrong);
+               font-size:15px;color:var(--wrong);font-weight:600;cursor:pointer;">
+        🗑️ 重置所有答题记录
+      </button>
+      <div style="font-size:11px;color:var(--text2);padding:0 2px;">
+        清空所有做题进度、错题、掌握记录，题库内容不受影响。
+      </div>
+
+    </div>
+  </div>
+  <div class="safe-bg"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- 自定义确认弹窗 -->
+<div class="modal-overlay" id="modal-overlay" onclick="modalCancel()">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-icon"  id="modal-icon">⚠️</div>
+    <div class="modal-title" id="modal-title">确认操作</div>
+    <div class="modal-body"  id="modal-body"></div>
+    <div class="modal-btns">
+      <button class="modal-btn-confirm" id="modal-confirm">确认</button>
+      <button class="modal-btn-cancel"  onclick="modalCancel()">取消</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+//  刷题本 v1.2  2026-03-30
+// ══════════════════════════════════════════════
+
+const KEY_DECKS = 'quiz_decks';
+const KEY_DECK  = id => `quiz_deck_${id}`;
+const KEY_STATS    = id => `quiz_stats_${id}`;
+const KEY_ACTIVITY = 'quiz_activity'; // {YYYY-MM-DD: true}
+const PRESET_ID      = 'deck_preset_ch01';
+const PRESET_VERSION = '1.6'; // 升版本号强制覆盖旧预置数据
+const KEY_PRESET_VER  = 'quiz_preset_version';
+
+// 掌握阈值：连续答对几次视为掌握
+const CONFIG = { masteryThreshold: 2, errorRateThreshold: 30, sprintCount: 20, explainMode: 'error' }; // errorRateThreshold: 易错题阈值%
+
+let decks = [];
+let quizQueue   = [];   // [{...q, _deckId}]
+let quizIdx     = 0;
+let selOpts     = new Set();
+let submitted   = false;
+let sesCorrect  = 0;
+let sesTotal    = 0;
+let quizMode    = 'chapter'; // 'chapter'|'errors'|'marked'
+let _curDeckId     = null;
+let _curChIdx      = null;
+let sesStats       = {};
+let sprintChScores = {};  // {chKey: {correct, total}} 冲刺各章得分
+let selectedDeckId = null;  // 首页当前选中章节
+let selectedChIdx  = null;
+
+// ══════════════════════════════════════════════
+//  初始化
+// ══════════════════════════════════════════════
+function init() {
+  const raw = localStorage.getItem(KEY_DECKS);
+  decks = raw ? JSON.parse(raw) : [];
+
+  // 写入预置题库（首次或版本升级时覆盖）
+  const savedVer = localStorage.getItem(KEY_PRESET_VER);
+  if (savedVer !== PRESET_VERSION) {
+    // 移除旧预置条目（如有）
+    decks = decks.filter(d => d.id !== PRESET_ID);
+    decks.unshift({ id: PRESET_ID, name: '护士执业资格 2026', importedAt: '2026-03-30T00:00:00Z' });
+    localStorage.setItem(KEY_DECKS, JSON.stringify(decks));
+    localStorage.setItem(KEY_DECK(PRESET_ID), JSON.stringify(PRESET_DATA));
+    localStorage.setItem(KEY_PRESET_VER, PRESET_VERSION);
+  }
+
+  renderHome();
+
+  document.getElementById('file-input').onchange    = handleImport;
+  document.getElementById('btn-submit').onclick     = submitMulti;
+  document.getElementById('btn-next').onclick       = nextQ;
+  document.getElementById('btn-explain').onclick    = toggleExplain;
+  document.getElementById('btn-mark').onclick       = toggleMark;
+  document.getElementById('btn-back').onclick       = () => goHome();
+  document.getElementById('btn-retry-err').onclick        = retryErrors;
+  document.getElementById('modal-confirm').onclick        = modalConfirm;
+  document.getElementById('btn-retry-unmastered').onclick = retryUnmastered;
+  document.getElementById('btn-retry-all').onclick        = retryAll;
+  initSettings();
+}
+
+// ══════════════════════════════════════════════
+//  首页：直接展示所有章节（跨所有题库）
+// ══════════════════════════════════════════════
+function renderHome() {
+  // 统计全局四项
+  var hidePreset = localStorage.getItem('cfg_showPreset') === 'false';
+  let totTotal = 0, totDone = 0, totErr = 0, totMaster = 0;
+  decks.forEach(d => {
+    if (hidePreset && d.id === PRESET_ID) return;
+    const deck = getDeck(d.id);
+    const st   = getStats(d.id);
+    if (!deck) return;
+    deck.chapters.forEach(ch => {
+      totTotal += ch.questions.length;
+      ch.questions.forEach(q => {
+        const s = st[q.id];
+        if (!s) return;
+        if (s.times  > 0) totDone++;
+        if (s.errors > 0) totErr++;
+        if (s.mastered)   totMaster++;
+      });
+    });
+  });
+  document.getElementById('st-total').textContent = totTotal;
+  document.getElementById('st-done').textContent  = totTotal > 0 ? Math.round(totDone / totTotal * 100) + '%' : '0%';
+  document.getElementById('st-err').textContent   = totErr;
+
+
+
+  // 汇总所有题库的章节，平铺展示
+  const cl = document.getElementById('chapter-list');
+  let html = '';
+  let totalChapters = 0;
+
+  decks.forEach(d => {
+    if (hidePreset && d.id === PRESET_ID) return;
+    const deck = getDeck(d.id);
+    if (!deck) return;
+    const st = getStats(d.id);
+
+    // 多套题库时显示题库名分组标题
+    if (decks.length > 1) {
+      html += `<div style="font-size:12px;color:var(--text2);font-weight:600;
+        padding:10px 0 4px;letter-spacing:.3px;">${d.name}</div>`;
+    }
+
+    deck.chapters.forEach((ch, idx) => {
+      const total  = ch.questions.length;
+      const done   = ch.questions.filter(q => ((st[q.id] && st[q.id].times)  || 0) > 0).length;
+      const errs   = ch.questions.filter(q => ((st[q.id] && st[q.id].errors) || 0) > 0).length;
+      const marks  = ch.questions.filter(q =>  (st[q.id] && st[q.id].marked)).length;
+      const donePct  = total > 0 ? Math.round(done / total * 100) : 0;
+      const isSelected = (selectedDeckId === d.id && selectedChIdx === idx);
+
+      // 星级：基于错误率，只在做过题后显示
+      var attempted = ch.questions.filter(function(q) { return st[q.id] && (parseInt(st[q.id].times)||0) > 0; }).length;
+      var starsHtml = '';
+      if (attempted > 0) {
+        var errRateStar = errs / attempted * 100;
+        var starCount   = errRateStar >= 80 ? 1 : errRateStar >= 60 ? 2 : errRateStar >= 40 ? 3 : errRateStar >= 20 ? 4 : 5;
+        var starStr = '';
+        for (var si = 0; si < 5; si++) { starStr += si < starCount ? '⭐' : '☆'; }
+        starsHtml = '<div style="font-size:12px;letter-spacing:-1px;flex-shrink:0;">' + starStr + '</div>';
+      }
+
+      html += `<div class="chapter-card${isSelected ? ' selected' : ''}"
+          onclick="selectChapter('${d.id}',${idx})">
+        <div class="chapter-info">
+          <div class="chapter-name">${ch.name}</div>
+          <div class="prog-bar" style="margin-top:8px;"><div class="prog-fill" style="width:${donePct}%"></div></div>
+        </div>
+        ${starsHtml}
+        <div class="chapter-arrow">›</div>
+      </div>`;
+      totalChapters++;
+    });
+  });
+
+  if (totalChapters === 0) {
+    html = `<div class="empty-tip">还没有题库<br>前往设置页导入 .quizpack</div>`;
+  }
+
+  cl.innerHTML = html;
+  document.getElementById('deck-label').textContent =
+    `章节（共${totalChapters}章）`;
+  updateSprintSub();
+}
+
+// ══════════════════════════════════════════════
+//  开始刷题
+// ══════════════════════════════════════════════
+function startChapter(deckId, chIdx, includeAll = false) {
+  const deck  = getDeck(deckId);
+  const st    = getStats(deckId);
+  _curDeckId  = deckId;
+  _curChIdx   = chIdx;
+  quizMode    = 'chapter';
+  const all   = deck.chapters[chIdx].questions.map(q => Object.assign({}, q, {_deckId: deckId}));
+  quizQueue   = includeAll ? all : all.filter(q => !(st[q.id] && st[q.id].mastered));
+  if (quizQueue.length === 0) {
+    toast('本章全部已掌握 🎉');
+    return;
+  }
+  startQuiz();
+}
+
+function openSpecial(mode) {
+  quizMode  = mode;
+  quizQueue = [];
+  decks.forEach(d => {
+    const deck = getDeck(d.id);
+    const st   = getStats(d.id);
+    deck.chapters.forEach(ch => {
+      ch.questions.forEach(q => {
+        const s = st[q.id];
+        if (mode === 'errors'   && s && s.errors > 0) quizQueue.pushObject.assign({}, q, {_deckId: d.id});
+        if (mode === 'marked'   && s && s.marked)     quizQueue.pushObject.assign({}, q, {_deckId: d.id});
+        if (mode === 'mastered' && s && s.mastered)   quizQueue.pushObject.assign({}, q, {_deckId: d.id});
+      });
+    });
+  });
+  if (quizQueue.length === 0) {
+    toast(mode === 'errors' ? '暂无错题 👏' : mode === 'mastered' ? '暂无已掌握题' : '暂无标记题');
+    return;
+  }
+  startQuiz();
+}
+
+function retryErrors() {
+  quizQueue = quizQueue.filter(q => {
+    const s = getStats(q._deckId)[q.id];
+    return s && s.lastResult === 'wrong';
+  });
+  if (quizQueue.length === 0) { toast('本次没有错题 👏'); return; }
+  startQuiz();
+}
+
+function retryUnmastered() {
+  if (_curDeckId === null) return;
+  startChapter(_curDeckId, _curChIdx, false); // false = 只刷未掌握
+}
+
+function retryAll() {
+  if (_curDeckId === null) return;
+  startChapter(_curDeckId, _curChIdx, true);  // true = 全部重刷
+}
+
+function startQuiz() {
+  quizIdx    = 0;
+  sesCorrect = 0;
+  sesTotal   = 0;
+  sesStats   = {};
+  showPage('page-quiz');
+  renderQ();
+}
+
+// ══════════════════════════════════════════════
+//  渲染题目
+// ══════════════════════════════════════════════
+function renderQ() {
+  const q = quizQueue[quizIdx];
+  selOpts.clear();
+  submitted = false;
+
+  // 进度
+  const pct = Math.round((quizIdx + 1) / quizQueue.length * 100);
+  document.getElementById('quiz-prog-txt').textContent  = `${quizIdx + 1} / ${quizQueue.length}`;
+  document.getElementById('quiz-prog-fill').style.width = pct + '%';
+
+  // 题型徽章
+  const badge = document.getElementById('type-badge');
+  const isMulti = q.type === 'multi';
+  badge.textContent = isMulti ? '多选' : '单选';
+  badge.className   = 'type-badge' + (isMulti ? ' multi' : '');
+
+  // 题目编号
+  document.getElementById('q-number').textContent = q.questionNumber || '';
+
+  // 题干
+  document.getElementById('stem-text').textContent = q.stem;
+
+  // 页码信息
+  var pageInfo = '';
+  if (q.questionPage) pageInfo += '题P.' + q.questionPage;
+  if (q.answerPage)   pageInfo += (pageInfo ? ' | ' : '') + '答P.' + q.answerPage;
+  var pageEl = document.getElementById('q-page-info');
+  pageEl.textContent    = pageInfo;
+  pageEl.style.display  = pageInfo ? '' : 'none';
+
+  // 标记按钮
+  const st  = getStats(q._deckId);
+  const mk  = (st[q.id] && st[q.id].marked);
+  const mb  = document.getElementById('btn-mark');
+  mb.textContent = mk ? '⭐' : '☆';
+  mb.className   = 'btn-icon' + (mk ? ' btn-mark-active' : '');
+
+  // 选项（保持原始顺序）
+  document.getElementById('opts').innerHTML = q.options.map((opt, i) => {
+    const letter = opt.charAt(0);
+    const text   = opt.slice(2).trim();
+    return `<button class="opt" id="opt-${i}" onclick="clickOpt(${i})">
+      <span class="lt">${letter}.</span>
+      <span class="tx">${text}</span>
+    </button>`;
+  }).join('');
+
+  // 重置结果区
+  const rb = document.getElementById('result-bar');
+  rb.className   = 'result-bar';
+  rb.textContent = '';
+  const eb = document.getElementById('explain-block');
+  eb.classList.remove('on');
+  document.getElementById('explain-text').textContent = '';
+  document.getElementById('btn-explain').textContent  = '查看解析';
+
+  // 底部：单选隐藏提交按钮区域（点击即判断），多选显示
+  document.getElementById('ft-submit').style.display = isMulti ? '' : 'none';
+  document.getElementById('ft-next').style.display   = 'none';
+  if (isMulti) document.getElementById('btn-submit').disabled = true;
+
+  document.getElementById('quiz-body').scrollTop = 0;
+  // 如果抽屉开着，刷新一下
+  if (document.getElementById('q-drawer').classList.contains('open')) renderDrawer();
+}
+
+// ══════════════════════════════════════════════
+//  点击选项
+// ══════════════════════════════════════════════
+function clickOpt(i) {
+  if (submitted) return;
+  const q = quizQueue[quizIdx];
+
+  if (q.type === 'multi') {
+    // 多选：切换选中
+    const btn = document.getElementById(`opt-${i}`);
+    if (selOpts.has(i)) {
+      selOpts.delete(i);
+      btn.className = 'opt';
+    } else {
+      selOpts.add(i);
+      btn.className = 'opt selected';
+    }
+    document.getElementById('btn-submit').disabled = selOpts.size === 0;
+  } else {
+    // 单选：点击即判断
+    selOpts.clear();
+    selOpts.add(i);
+    judge();
+  }
+}
+
+// ══════════════════════════════════════════════
+//  多选提交
+// ══════════════════════════════════════════════
+function submitMulti() {
+  if (submitted || selOpts.size === 0) return;
+  judge();
+}
+
+// ══════════════════════════════════════════════
+//  判断对错（单选/多选共用）
+// ══════════════════════════════════════════════
+function judge() {
+  submitted = true;
+  const q = quizQueue[quizIdx];
+
+  const correctSet  = new Set(q.answer);
+  const selectedSet = new Set([...selOpts].map(i => q.options[i].charAt(0)));
+  const isCorrect   = setsEqual(correctSet, selectedSet);
+
+  // 高亮所有选项
+  q.options.forEach((opt, i) => {
+    const letter = opt.charAt(0);
+    const btn    = document.getElementById(`opt-${i}`);
+    if (correctSet.has(letter)) {
+      btn.className = 'opt correct';
+    } else if (selOpts.has(i)) {
+      btn.className = 'opt wrong-sel';
+    }
+    btn.disabled = true;
+  });
+
+  // 结果横幅
+  const rb = document.getElementById('result-bar');
+  rb.textContent = isCorrect ? '✅ 回答正确' : `❌ 正确答案：${q.answer.join('、')}`;
+  rb.className   = 'result-bar ' + (isCorrect ? 'ok' : 'err');
+
+  // 记录
+  sesStats[q.id] = isCorrect ? 'ok' : 'err';
+  const statAfter = updateStats(q._deckId, q.id, isCorrect);
+  // 冲刺模式：记录各章得分
+  if (quizMode === 'sprint' && q._chName) {
+    if (!sprintChScores[q._chName]) sprintChScores[q._chName] = { correct: 0, total: 0 };
+    sprintChScores[q._chName].total++;
+    if (isCorrect) sprintChScores[q._chName].correct++;
+  }
+  sesTotal++;
+  if (isCorrect) {
+    sesCorrect++;
+    if (statAfter.mastered && statAfter.streak === CONFIG.masteryThreshold) {
+      // 刚好达到阈值，提示掌握
+      setTimeout(() => toast('已掌握 ✅'), 300);
+    }
+  }
+
+  // 解析自动展开
+  var explainMode = CONFIG.explainMode || 'error';
+  if (explainMode === 'auto' || (explainMode === 'error' && !isCorrect)) {
+    document.getElementById('explain-text').textContent = q.explanation || '暂无解析';
+    document.getElementById('explain-block').classList.add('on');
+    document.getElementById('btn-explain').textContent = '收起解析';
+  }
+
+  // 切换底部
+  document.getElementById('ft-submit').style.display = 'none';
+  document.getElementById('ft-next').style.display   = '';
+
+  // 滚到结果
+  setTimeout(() => {
+    document.getElementById('result-bar')
+      .scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, 80);
+}
+
+// ══════════════════════════════════════════════
+//  解析 / 下一题 / 标记
+// ══════════════════════════════════════════════
+function toggleExplain() {
+  const q   = quizQueue[quizIdx];
+  const eb  = document.getElementById('explain-block');
+  const btn = document.getElementById('btn-explain');
+  if (eb.classList.contains('on')) {
+    eb.classList.remove('on');
+    btn.textContent = '查看解析';
+  } else {
+    document.getElementById('explain-text').textContent = q.explanation || '暂无解析';
+    eb.classList.add('on');
+    btn.textContent = '收起解析';
+    setTimeout(() => eb.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80);
+  }
+}
+
+function nextQ() {
+  quizIdx++;
+  if (quizIdx >= quizQueue.length) showDone();
+  else renderQ();
+}
+
+function toggleMark() {
+  const q  = quizQueue[quizIdx];
+  const st = getStats(q._deckId);
+  if (!st[q.id]) st[q.id] = { times: 0, errors: 0, marked: false, lastResult: null };
+  st[q.id].marked = !st[q.id].marked;
+  saveStats(q._deckId, st);
+  const mb = document.getElementById('btn-mark');
+  mb.textContent = st[q.id].marked ? '⭐' : '☆';
+  mb.className   = 'btn-icon' + (st[q.id].marked ? ' btn-mark-active' : '');
+  toast(st[q.id].marked ? '已标记 ⭐' : '已取消标记');
+}
+
+// ══════════════════════════════════════════════
+//  完成页
+// ══════════════════════════════════════════════
+function showDone() {
+  const pct  = sesTotal > 0 ? Math.round(sesCorrect / sesTotal * 100) : 0;
+  const errN = sesTotal - sesCorrect;
+  document.getElementById('done-icon').textContent  = pct === 100 ? '🎉' : pct >= 60 ? '👍' : '💪';
+  document.getElementById('done-title').textContent = quizMode === 'sprint' ? '冲刺完成' : (pct === 100 ? '全部答对！' : '本组完成');
+  document.getElementById('done-score').innerHTML =
+    `共 <strong>${sesTotal}</strong> 题 · 答对 <strong>${sesCorrect}</strong><br>正确率 <strong>${pct}%</strong>`;
+
+  // 冲刺：显示各章得分分布
+  const chScoreEl = document.getElementById('done-ch-scores');
+  if (quizMode === 'sprint' && Object.keys(sprintChScores).length > 0) {
+    const rows = Object.keys(sprintChScores).map(name => {
+      const s   = sprintChScores[name];
+      const p   = s.total > 0 ? Math.round(s.correct / s.total * 100) : 0;
+      const col = p >= 80 ? 'var(--correct)' : p >= 60 ? 'var(--mark)' : 'var(--wrong)';
+      return `<div class="ch-score-row">
+        <div class="ch-score-name">${name}</div>
+        <div class="ch-score-bar-wrap"><div class="ch-score-bar-fill" style="width:${p}%;background:${col}"></div></div>
+        <div class="ch-score-pct" style="color:${col}">${p}%</div>
+      </div>`;
+    }).join('');
+    chScoreEl.innerHTML = '<div style="font-size:11px;font-weight:600;color:var(--text2);margin-bottom:8px;">各章得分</div>' + rows;
+    chScoreEl.style.display = '';
+  } else {
+    chScoreEl.style.display = 'none';
+  }
+
+  // 错题按钮
+  const errBtn = document.getElementById('btn-retry-err');
+  errBtn.style.display = errN > 0 ? '' : 'none';
+  errBtn.textContent   = `重刷错题（${errN}题）`;
+
+  // 未掌握按钮（仅章节模式且有 _curDeckId）
+  const unmBtn = document.getElementById('btn-retry-unmastered');
+  const allBtn = document.getElementById('btn-retry-all');
+  // 冲刺模式隐藏章节按钮
+  if (quizMode === 'sprint') {
+    errBtn.style.display = 'none';
+    unmBtn.style.display = 'none';
+    allBtn.style.display = 'none';
+  } else if (quizMode === 'chapter' && _curDeckId !== null) {
+    const deck    = getDeck(_curDeckId);
+    const st      = getStats(_curDeckId);
+    const chQ     = deck.chapters[_curChIdx].questions;
+    const unmCount = chQ.filter(q => !(st[q.id] && st[q.id].mastered)).length;
+    unmBtn.style.display = unmCount > 0 ? '' : 'none';
+    unmBtn.textContent   = `只刷未掌握（${unmCount}题）`;
+    allBtn.style.display = '';
+  } else {
+    unmBtn.style.display = 'none';
+    allBtn.style.display = 'none';
+  }
+  showPage('page-done');
+}
+
+// ══════════════════════════════════════════════
+//  导入
+// ══════════════════════════════════════════════
+function triggerImport() { document.getElementById('file-input').click(); }
+
+function handleImport(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  e.target.value = '';
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      if (!data.chapters || !data.name) throw new Error();
+      const id = 'deck_' + Date.now();
+      decks.push({ id, name: data.name, importedAt: new Date().toISOString() });
+      localStorage.setItem(KEY_DECKS, JSON.stringify(decks));
+      localStorage.setItem(KEY_DECK(id), JSON.stringify(data));
+      renderHome();
+      toast(`已导入：${data.name}`);
+    } catch { toast('导入失败：请检查文件格式'); }
+  };
+  reader.readAsText(file);
+}
+
+// ══════════════════════════════════════════════
+//  存储
+// ══════════════════════════════════════════════
+function getStats(deckId) {
+  const r = localStorage.getItem(KEY_STATS(deckId));
+  return r ? JSON.parse(r) : {};
+}
+function saveStats(deckId, st) {
+  localStorage.setItem(KEY_STATS(deckId), JSON.stringify(st));
+}
+function updateStats(deckId, qId, ok) {
+  const st = getStats(deckId);
+  if (!st[qId]) st[qId] = { times: 0, errors: 0, marked: false, lastResult: null, streak: 0, mastered: false };
+  // 兼容旧数据：确保数值字段是数字
+  st[qId].times  = parseInt(st[qId].times)  || 0;
+  st[qId].errors = parseInt(st[qId].errors) || 0;
+  st[qId].streak = parseInt(st[qId].streak) || 0;
+  const s = st[qId];
+  s.times++;
+  if (!ok) { s.errors++; s.streak = 0; s.mastered = false; }
+  else {
+    s.streak = (s.streak || 0) + 1;
+    if (s.streak >= CONFIG.masteryThreshold) s.mastered = true;
+  }
+  s.lastResult = ok ? 'correct' : 'wrong';
+  saveStats(deckId, st);
+  // 记录今日有练习
+  var today = new Date().toISOString().slice(0,10);
+  var act = JSON.parse(localStorage.getItem(KEY_ACTIVITY) || '{}');
+  act[today] = true;
+  localStorage.setItem(KEY_ACTIVITY, JSON.stringify(act));
+  return st[qId];
+}
+function getDeck(deckId) {
+  const r = localStorage.getItem(KEY_DECK(deckId));
+  return r ? JSON.parse(r) : null;
+}
+
+// ══════════════════════════════════════════════
+//  工具
+// ══════════════════════════════════════════════
+function setsEqual(a, b) {
+  if (a.size !== b.size) return false;
+  for (const v of a) if (!b.has(v)) return false;
+  return true;
+}
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function goHome() {
+  renderHome();
+  updateHomeButtons();
+  showPage('page-home');
+}
+let _tt;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('on');
+  clearTimeout(_tt);
+  _tt = setTimeout(() => el.classList.remove('on'), 2000);
+}
+
+// ══════════════════════════════════════════════
+//  预置题库数据（第一章 · 呼吸系统疾病患者的护理）
+// ══════════════════════════════════════════════
+const PRESET_DATA = {
+  "version": "1.0",
+  "name": "护士执业资格 2026",
+  "exportedAt": "2026-03-30T00:00:00Z",
+  "chapters": [
+    {
+      "id": "ch01",
+      "name": "第一章 呼吸系统疾病患者的护理",
+      "questions": [
+        { "id": "ch01q001", "type": "single", "stem": "大量咯血是指", "options": ["A. 24小时咯血量大于200ml", "B. 24小时咯血量大于300ml", "C. 24小时咯血量大于400ml", "D. 24小时咯血量大于500ml", "E. 24小时咯血量大于600ml"], "answer": ["D"], "explanation": "咯血指喉以下呼吸道或肺组织出血经口咯出。根据咯血量多少，临床分为痰中带血、少量咯血（<100ml/d）、中等量咯血（100~500ml/d）和大量咯血（>500ml/d 或1次300~500ml）。" },
+        { "id": "ch01q002", "type": "single", "stem": "下列选项中最可能出现\"三凹征\"的是", "options": ["A. 吸气性呼吸困难", "B. 呼气性呼吸困难", "C. 混合性呼吸困难", "D. 咳嗽", "E. 咳痰"], "answer": ["A"], "explanation": "吸气性呼吸困难特点为吸气困难，伴干咳，重者可出现吸气时胸骨上窝、锁骨上窝和肋间隙明显凹陷，即\"三凹征\"，主要见于急性喉炎、喉头水肿、喉癌、喉与气管异物、气管肿瘤、气管外压性狭窄等。" },
+        { "id": "ch01q003", "type": "single", "stem": "下列有关呼吸系统结构和功能的描述，说法错误的是", "options": ["A. 胸膜腔内通常是正压", "B. 上呼吸道主要起对吸入气体加温、湿化、机械拦阻的作用", "C. 肺由肺循环和支气管循环进行双重血流供应", "D. 喉梗阻时进行环甲膜穿刺的部位是环状软骨之上", "E. 胸膜腔负压是维持肺的扩张状态，同时也是促进胸腔内静脉血和淋巴液回流的重要因素"], "answer": ["A"], "explanation": "胸膜腔内通常是负压。" },
+        { "id": "ch01q004", "type": "single", "stem": "为判断呼吸衰竭患者代谢紊乱情况，首选的辅助检查是", "options": ["A. 血常规", "B. 尿常规", "C. 血气分析", "D. 肺功能测定", "E. 血细胞涂片"], "answer": ["C"], "explanation": "血气分析可了解血液酸碱度、氧分压、二氧化碳分压、碱剩余等情况，有助于判断呼吸衰竭患者代谢紊乱情况。而肺功能测定只能了解患者呼吸功能。" },
+        { "id": "ch01q005", "type": "single", "stem": "呼吸衰竭患者动脉血氧分压小于", "options": ["A. 30mmHg", "B. 40mmHg", "C. 50mmHg", "D. 60mmHg", "E. 70mmHg"], "answer": ["D"], "explanation": "呼吸衰竭患者动脉血氧分压小于60mmHg。" },
+        { "id": "ch01q006", "type": "single", "stem": "上呼吸道由", "options": ["A. 气管、支气管、细支气管和肺实质构成", "B. 口腔、气管、喉构成", "C. 鼻、咽、喉构成", "D. 鼻、咽、气管构成", "E. 口腔、鼻腔、咽构成"], "answer": ["C"], "explanation": "上呼吸道由鼻、咽、喉构成。" },
+        { "id": "ch01q007", "type": "single", "stem": "呼吸衰竭的诊断标准是在海平面、标准大气压、静息状态、呼吸空气条件下，动脉血氧分压（PaO₂）<60mmHg，伴或不伴二氧化碳分压（PaCO₂）>50mmHg。下列说法正确的是", "options": ["A. 单纯PaO₂<60mmHg为Ⅱ型呼吸衰竭", "B. 伴PaCO₂>50mmHg为Ⅰ型呼吸衰竭", "C. 单纯PaO₂<60mmHg为Ⅰ型呼吸衰竭，若伴PaCO₂>50mmHg则为Ⅱ型呼吸衰竭", "D. 单纯PaO₂<60mmHg为Ⅱ型呼吸衰竭，若伴PaCO₂>50mmHg则为Ⅰ型呼吸衰竭", "E. 以上均不正确"], "answer": ["C"], "explanation": "单纯的PaO₂<60mmHg为Ⅰ型呼吸衰竭；若伴PaCO₂>50mmHg，则为Ⅱ型呼吸衰竭。" },
+        { "id": "ch01q008", "type": "single", "stem": "发生Ⅱ型呼吸衰竭时，为保持呼吸道通畅，首先应", "options": ["A. 给予高浓度吸氧", "B. 清除滞留在口咽部的分泌物、呕吐物", "C. 气管插管", "D. 使用支气管扩张剂", "E. 机械通气"], "answer": ["B"], "explanation": "发生Ⅱ型呼吸衰竭时，为保持呼吸道通畅，首先清除滞留在口咽部的分泌物、呕吐物。" },
+        { "id": "ch01q009", "type": "single", "stem": "发生呼吸衰竭时，在静息时呼吸空气，总肺泡通气量约为多少才能维持正常的肺泡氧和二氧化碳分压", "options": ["A. 2L/min", "B. 3L/min", "C. 4L/min", "D. 5L/min", "E. 6L/min"], "answer": ["C"], "explanation": "在静息时呼吸空气，总肺泡通气量约为4L/min 才能维持正常的肺泡氧和二氧化碳分压。" },
+        { "id": "ch01q010", "type": "single", "stem": "慢性呼吸衰竭患者保持呼吸道通畅的处理措施，不包括", "options": ["A. 鼓励患者咳嗽排痰", "B. 立即气管切开", "C. 体位引流", "D. 雾化吸入", "E. 吸痰"], "answer": ["B"], "explanation": "处理措施包括鼓励患者咳嗽排痰、体位引流、雾化吸入、吸痰等，不应立即气管切开。" },
+        { "id": "ch01q011", "type": "single", "stem": "患者，男，60岁，慢阻肺急性加重，出现明显发绀、呼吸困难。给氧方式应选择", "options": ["A. 高流量高浓度吸氧", "B. 低流量低浓度持续吸氧", "C. 间歇高流量吸氧", "D. 呼吸机加压给氧", "E. 不需要给氧"], "answer": ["B"], "explanation": "慢阻肺急性加重伴呼吸衰竭时，应给予低流量低浓度持续吸氧（1~2L/min，浓度24%~28%），以避免抑制低氧对呼吸中枢的驱动作用。" },
+        { "id": "ch01q012", "type": "single", "stem": "患者行胸腔闭式引流，水封瓶水柱波动消失，护士挤压引流管后水柱波动恢复，说明", "options": ["A. 引流管堵塞", "B. 肺已复张", "C. 引流管扭曲", "D. 引流管位置不当", "E. 水封瓶密封不严"], "answer": ["A"], "explanation": "水封瓶水柱波动消失，挤压引流管后水柱波动恢复，说明引流管堵塞，挤压后暂时通畅。" },
+        { "id": "ch01q013", "type": "single", "stem": "患者行肺叶切除术后，最适宜的卧位是", "options": ["A. 去枕平卧位", "B. 俯卧位", "C. 健侧卧位", "D. 半坐卧位，床头抬高30°~45°", "E. 平卧"], "answer": ["D"], "explanation": "肺叶切除术后，应取半坐卧位，床头抬高30°~45°，有利于呼吸和引流。" },
+        { "id": "ch01q014", "type": "single", "stem": "护士挤压胸腔引流管的目的是", "options": ["A. 预防感染", "B. 防止引流管打折", "C. 防止引流液倒流", "D. 重建胸腔负压", "E. 保持引流管通畅"], "answer": ["E"], "explanation": "护士挤压胸腔引流管的目的是保持引流管通畅，防止血凝块等阻塞引流管。" },
+        { "id": "ch01q015", "type": "single", "stem": "术后第4天，胸腔引流瓶中水柱停止波动，护士判断其原因最可能是", "options": ["A. 水封泄漏", "B. 引流管堵塞", "C. 肺已重新扩张", "D. 发生肺不张", "E. 引流管打折"], "answer": ["C"], "explanation": "术后第4天水柱停止波动，最可能是肺已重新扩张，胸膜腔内无气体或液体流动，属正常现象。" }
+      ]
+    },
+    {
+      "id": "ch02",
+      "name": "第二章 循环系统疾病患者的护理",
+      "questions": [
+        { "id": "ch02q001", "type": "single", "stem": "心力衰竭患者最早出现的症状是", "options": ["A. 劳力性呼吸困难", "B. 端坐呼吸", "C. 夜间阵发性呼吸困难", "D. 急性肺水肿", "E. 咳嗽咳痰"], "answer": ["A"], "explanation": "心力衰竭患者最早出现的症状是劳力性呼吸困难，因活动时心输出量不能满足需要，肺淤血加重所致。" },
+        { "id": "ch02q002", "type": "single", "stem": "左心衰竭时最典型的症状是", "options": ["A. 水肿", "B. 肝大", "C. 呼吸困难", "D. 颈静脉怒张", "E. 腹水"], "answer": ["C"], "explanation": "左心衰竭主要表现为肺循环淤血，最典型症状是呼吸困难，包括劳力性呼吸困难、端坐呼吸、夜间阵发性呼吸困难。" },
+        { "id": "ch02q003", "type": "single", "stem": "右心衰竭最早出现的症状是", "options": ["A. 呼吸困难", "B. 水肿", "C. 肝大", "D. 食欲不振、恶心、呕吐", "E. 颈静脉怒张"], "answer": ["D"], "explanation": "右心衰竭最早出现的症状是消化道症状，表现为食欲不振、恶心、呕吐，由胃肠道及肝脏淤血所致。" },
+        { "id": "ch02q004", "type": "single", "stem": "洋地黄中毒最常见的早期表现是", "options": ["A. 心动过速", "B. 黄绿视", "C. 恶心、呕吐", "D. 室性早搏", "E. 房室传导阻滞"], "answer": ["C"], "explanation": "洋地黄中毒最常见的早期表现是胃肠道反应，即恶心、呕吐，还可有食欲减退等，是停药的重要指征。" },
+        { "id": "ch02q005", "type": "single", "stem": "急性心肌梗死患者最先出现且最突出的症状是", "options": ["A. 发热", "B. 心律失常", "C. 心源性休克", "D. 持续剧烈胸痛", "E. 急性左心衰竭"], "answer": ["D"], "explanation": "急性心肌梗死患者最先出现且最突出的症状是持续剧烈的胸骨后或心前区压榨性疼痛，持续时间超过30分钟，休息和含服硝酸甘油不能缓解。" },
+        { "id": "ch02q006", "type": "single", "stem": "心绞痛发作时首选的处理措施是", "options": ["A. 立即卧床休息", "B. 吸氧", "C. 舌下含服硝酸甘油", "D. 静脉注射吗啡", "E. 口服阿司匹林"], "answer": ["A"], "explanation": "心绞痛发作时首选立即停止活动、就地休息，以减少心肌耗氧量。休息后症状不缓解再舌下含服硝酸甘油。" },
+        { "id": "ch02q007", "type": "single", "stem": "高血压病最常见的死亡原因是", "options": ["A. 肾功能衰竭", "B. 高血压脑病", "C. 脑血管意外", "D. 心力衰竭", "E. 主动脉夹层"], "answer": ["C"], "explanation": "高血压病最常见的死亡原因是脑血管意外（脑卒中），包括脑出血和脑梗死。" },
+        { "id": "ch02q008", "type": "single", "stem": "二尖瓣狭窄患者最常见的心律失常是", "options": ["A. 室性期前收缩", "B. 心房颤动", "C. 室性心动过速", "D. 房室传导阻滞", "E. 窦性心动过缓"], "answer": ["B"], "explanation": "二尖瓣狭窄由于长期左心房压力增高、左心房扩大，最常见的心律失常是心房颤动。" },
+        { "id": "ch02q009", "type": "multi", "stem": "下列属于心力衰竭诱因的是", "options": ["A. 感染", "B. 心律失常", "C. 过度劳累", "D. 情绪激动", "E. 低钠饮食"], "answer": ["A","B","C","D"], "explanation": "心力衰竭的常见诱因包括：感染（尤其呼吸道感染）、心律失常、过度劳累和情绪激动、血容量增加（如输液过多过快）、治疗不当等。低钠饮食不是诱因。" },
+        { "id": "ch02q010", "type": "single", "stem": "患者，女，65岁，慢性心衰，医嘱给予呋塞米利尿治疗，护士应重点观察", "options": ["A. 血糖变化", "B. 血钾变化", "C. 血钠变化", "D. 血钙变化", "E. 血磷变化"], "answer": ["B"], "explanation": "呋塞米为袢利尿剂，排钾作用强，使用时最重要的是监测血钾，防止低钾血症，低钾可诱发洋地黄中毒和心律失常。" }
+      ]
+    },
+    {
+      "id": "ch03",
+      "name": "第三章 消化系统疾病患者的护理",
+      "questions": [
+        { "id": "ch03q001", "type": "single", "stem": "消化性溃疡最常见的并发症是", "options": ["A. 出血", "B. 穿孔", "C. 幽门梗阻", "D. 癌变", "E. 腹膜炎"], "answer": ["A"], "explanation": "消化性溃疡最常见的并发症是出血，约占消化性溃疡患者的10%~35%，是上消化道出血最常见的原因。" },
+        { "id": "ch03q002", "type": "single", "stem": "肝硬化门静脉高压症最具特征性的临床表现是", "options": ["A. 腹水", "B. 脾大", "C. 食管胃底静脉曲张", "D. 腹壁静脉曲张", "E. 痔静脉曲张"], "answer": ["C"], "explanation": "食管胃底静脉曲张是门静脉高压症最具特征性的表现，也是最危险的，破裂出血可危及生命。" },
+        { "id": "ch03q003", "type": "single", "stem": "急性胰腺炎最主要的症状是", "options": ["A. 发热", "B. 恶心、呕吐", "C. 腹痛", "D. 黄疸", "E. 腹胀"], "answer": ["C"], "explanation": "急性胰腺炎最主要的症状是腹痛，多为突发性上腹部剧烈疼痛，向腰背部放射，弯腰屈膝位可稍减轻。" },
+        { "id": "ch03q004", "type": "single", "stem": "上消化道大出血时，患者出现口渴、烦躁、四肢厥冷，估计出血量至少为", "options": ["A. 100ml以上", "B. 300ml以上", "C. 500ml以上", "D. 1000ml以上", "E. 1500ml以上"], "answer": ["D"], "explanation": "出现口渴、烦躁、四肢厥冷等休克前兆症状时，失血量通常已超过1000ml（约占总血量的20%）。" },
+        { "id": "ch03q005", "type": "single", "stem": "肝性脑病最具特征性的体征是", "options": ["A. 黄疸", "B. 扑翼样震颤", "C. 肝臭", "D. 意识障碍", "E. 腹水"], "answer": ["B"], "explanation": "扑翼样震颤（肝性震颤）是肝性脑病最具特征性的神经系统体征，见于肝性脑病前驱期和昏迷前期。" },
+        { "id": "ch03q006", "type": "single", "stem": "肝硬化患者出现肝性脑病时，饮食护理正确的是", "options": ["A. 禁止蛋白质摄入", "B. 给予高蛋白饮食", "C. 暂时限制或禁止蛋白质摄入", "D. 给予高脂饮食", "E. 不限制饮食"], "answer": ["C"], "explanation": "肝性脑病发作期应暂时限制或禁止蛋白质摄入（尤其动物蛋白），以减少氨的来源；病情好转后逐步增加蛋白质，优先选择植物蛋白。" },
+        { "id": "ch03q007", "type": "single", "stem": "腹腔穿刺放腹水时，每次放液量一般不超过", "options": ["A. 1000ml", "B. 2000ml", "C. 3000ml", "D. 4000ml", "E. 5000ml"], "answer": ["C"], "explanation": "腹腔穿刺放腹水每次不超过3000ml，放液过快过多可引起水电解质紊乱，血浆蛋白大量丢失，诱发肝性脑病。" },
+        { "id": "ch03q008", "type": "single", "stem": "溃疡性结肠炎最主要的症状是", "options": ["A. 腹痛", "B. 腹泻和黏液脓血便", "C. 里急后重", "D. 发热", "E. 贫血"], "answer": ["B"], "explanation": "溃疡性结肠炎最主要的症状是腹泻和黏液脓血便，轻者每日数次，重者每日10次以上，常伴腹痛、里急后重。" }
+      ]
+    }
+  ]
+};
+
+// ══════════════════════════════════════════════
+//  首页章节选中 & 底部按钮
+// ══════════════════════════════════════════════
+function selectChapter(deckId, chIdx) {
+  selectedDeckId = deckId;
+  selectedChIdx  = chIdx;
+  renderHome();
+  updateHomeButtons();
+}
+
+function updateHomeButtons() {
+  const ids = ['btn-practice','btn-hard','btn-redo-err','btn-review-all'];
+  const labels = { 'btn-practice':'练习', 'btn-hard':'易错', 'btn-redo-err':'重练', 'btn-review-all':'复习' };
+
+  // 未选中：全部置灰，恢复默认文字
+  if (selectedDeckId === null) {
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      el.disabled    = true;
+      el.textContent = labels[id];
+    });
+    return;
+  }
+
+  const deck = getDeck(selectedDeckId);
+  const st   = getStats(selectedDeckId);
+  const ch   = deck.chapters[selectedChIdx];
+
+  // ── 四个计数，定义与 doAction 严格一一对应 ──
+  // 练习：从没做过（times == 0）
+  const cntPractice = ch.questions.filter(q => {
+    const s = st[q.id];
+    return !s || (parseInt(s.times) || 0) === 0;
+  }).length;
+
+  // 易错：做过 + 错误率 >= 阈值
+  const cntHard = ch.questions.filter(q => {
+    const s = st[q.id];
+    if (!s || (parseInt(s.times) || 0) === 0) return false;
+    return ((parseInt(s.errors) || 0) / (parseInt(s.times) || 1) * 100) >= CONFIG.errorRateThreshold;
+  }).length;
+
+  // 重练：全章所有题
+  const cntRedo = ch.questions.length;
+
+  // 复习：做过（times > 0）且未掌握（mastered == false）
+  const cntReview = ch.questions.filter(q => {
+    const s = st[q.id];
+    return s && (parseInt(s.times) || 0) > 0 && !s.mastered;
+  }).length;
+
+  const set = (id, count, enabled) => {
+    const el = document.getElementById(id);
+    el.textContent = count > 0 ? labels[id] + ' ' + count : labels[id];
+    el.disabled    = !enabled;
+  };
+  set('btn-practice',   cntPractice, cntPractice > 0);
+  set('btn-hard',       cntHard,     cntHard     > 0);
+  set('btn-redo-err',   cntRedo,     true);
+  set('btn-review-all', cntReview,   cntReview   > 0);
+}
+
+function doAction(mode) {
+  if (selectedDeckId === null) return;
+  const deck = getDeck(selectedDeckId);
+  const st   = getStats(selectedDeckId);
+  const ch   = deck.chapters[selectedChIdx];
+
+  _curDeckId = selectedDeckId;
+  _curChIdx  = selectedChIdx;
+  quizMode   = 'chapter';
+
+  if (mode === 'practice') {
+    // 练习：从没做过的题（times == 0）
+    quizQueue = ch.questions
+      .filter(q => { const s = st[q.id]; return !s || (parseInt(s.times) || 0) === 0; })
+      .map(q => Object.assign({}, q, {_deckId: selectedDeckId}));
+    if (quizQueue.length === 0) { toast('本章已全部做过 👏'); return; }
+
+  } else if (mode === 'hard') {
+    // 易错：做过 + 错误率 >= 阈值，按错误率降序
+    quizQueue = ch.questions
+      .filter(q => {
+        const s = st[q.id];
+        if (!s || (parseInt(s.times) || 0) === 0) return false;
+        return ((parseInt(s.errors) || 0) / (parseInt(s.times) || 1) * 100) >= CONFIG.errorRateThreshold;
+      })
+      .sort((a, b) => {
+        const sa = st[a.id], sb = st[b.id];
+        return ((parseInt(sb.errors)||0) / (parseInt(sb.times)||1))
+             - ((parseInt(sa.errors)||0) / (parseInt(sa.times)||1));
+      })
+      .map(q => Object.assign({}, q, {_deckId: selectedDeckId}));
+    if (quizQueue.length === 0) { toast('本章暂无易错题'); return; }
+
+  } else if (mode === 'redo') {
+    // 重练：全章所有题
+    quizQueue = ch.questions.map(q => Object.assign({}, q, {_deckId: selectedDeckId}));
+
+  } else {
+    // 复习：做过（times > 0）且未掌握（mastered == false）
+    quizQueue = ch.questions
+      .filter(q => { const s = st[q.id]; return s && (parseInt(s.times) || 0) > 0 && !s.mastered; })
+      .map(q => Object.assign({}, q, {_deckId: selectedDeckId}));
+    if (quizQueue.length === 0) { toast('做过的题都已掌握 🎉'); return; }
+  }
+  startQuiz();
+}
+
+// ══════════════════════════════════════════════
+//  题目列表抽屉
+// ══════════════════════════════════════════════
+function toggleDrawer() {
+  const d = document.getElementById('q-drawer');
+  if (d.classList.contains('open')) {
+    d.classList.remove('open');
+  } else {
+    renderDrawer();
+    d.classList.add('open');
+  }
+}
+
+function closeDrawer(e) {
+  document.getElementById('q-drawer').classList.remove('open');
+}
+
+function renderDrawer() {
+  const grid = document.getElementById('q-grid');
+  grid.innerHTML = quizQueue.map((q, i) => {
+    const st     = getStats(q._deckId);
+    const marked = st[q.id] && st[q.id].marked;
+    const res    = sesStats[q.id]; // 'ok'|'err'|undefined
+    let cls = 'q-dot';
+    if (i === quizIdx) cls += ' current';
+    else if (res === 'ok')  cls += ' ok';
+    else if (res === 'err') cls += ' err';
+    else if (marked)        cls += ' marked';
+    return `<button class="${cls}" onclick="jumpTo(${i})">${i + 1}</button>`;
+  }).join('');
+}
+
+function jumpTo(idx) {
+  closeDrawer();
+  quizIdx = idx;
+  renderQ();
+}
+
+// ══════════════════════════════════════════════
+//  主题
+// ══════════════════════════════════════════════
+function applyTheme(mode) {
+  var root = document.documentElement;
+  if (mode === 'dark')  { root.setAttribute('data-theme', 'dark');  }
+  else if (mode === 'light') { root.setAttribute('data-theme', 'light'); }
+  else { root.removeAttribute('data-theme'); } // auto：CSS media query 接管
+
+  // 更新按钮高亮
+  ['auto','light','dark'].forEach(function(m) {
+    var el = document.getElementById('theme-' + m);
+    if (el) {
+      if (m === mode) el.classList.add('active');
+      else el.classList.remove('active');
+    }
+  });
+}
+
+function setTheme(mode) {
+  localStorage.setItem('cfg_theme', mode);
+  applyTheme(mode);
+}
+
+function initTheme() {
+  var saved = localStorage.getItem('cfg_theme') || 'auto';
+  applyTheme(saved);
+  // 监听系统主题变化（跟随系统模式下实时响应）
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function() {
+      var cur = localStorage.getItem('cfg_theme') || 'auto';
+      if (cur === 'auto') applyTheme('auto');
+    });
+  }
+}
+
+// ══════════════════════════════════════════════
+//  设置
+// ══════════════════════════════════════════════
+function initSettings() {
+  const thr = parseInt(localStorage.getItem('cfg_errorThreshold') || '30');
+  const mst = parseInt(localStorage.getItem('cfg_masteryThreshold') || '2');
+  CONFIG.errorRateThreshold = thr;
+  CONFIG.masteryThreshold   = mst;
+  document.getElementById('threshold-slider').value = thr;
+  document.getElementById('threshold-val').textContent = thr + '%';
+  document.getElementById('mastery-slider').value = mst;
+  document.getElementById('mastery-val').textContent = mst + '次';
+  const sc = parseInt(localStorage.getItem('cfg_sprintCount') || '20');
+  CONFIG.sprintCount = sc;
+  document.getElementById('sprint-count-slider').value = sc;
+  document.getElementById('sprint-count-val').textContent = sc + '题';
+  // 调试开关：显示内置测试题库
+  var showPreset = localStorage.getItem('cfg_showPreset') !== 'false';
+  document.getElementById('toggle-preset').checked = showPreset;
+
+  // 解析模式
+  var explainMode = localStorage.getItem('cfg_explainMode') || 'error';
+  CONFIG.explainMode = explainMode;
+  ['error','manual','auto'].forEach(function(m) {
+    var el = document.getElementById('explain-' + m);
+    if (el) { if (m === explainMode) el.classList.add('active'); else el.classList.remove('active'); }
+  });
+
+  initTheme();
+}
+
+function setExplainMode(mode) {
+  localStorage.setItem('cfg_explainMode', mode);
+  CONFIG.explainMode = mode;
+  ['error','manual','auto'].forEach(function(m) {
+    var el = document.getElementById('explain-' + m);
+    if (el) { if (m === mode) el.classList.add('active'); else el.classList.remove('active'); }
+  });
+}
+
+function togglePreset(on) {
+  localStorage.setItem('cfg_showPreset', on ? 'true' : 'false');
+  // 如果当前选中的是预置题库，取消选中
+  if (!on && selectedDeckId === PRESET_ID) {
+    selectedDeckId = null;
+    selectedChIdx  = null;
+  }
+  renderHome();
+  updateHomeButtons();
+}
+
+function updateThreshold(val) {
+  CONFIG.errorRateThreshold = parseInt(val);
+  localStorage.setItem('cfg_errorThreshold', val);
+  document.getElementById('threshold-val').textContent = val + '%';
+  if (selectedDeckId !== null) updateHomeButtons();
+}
+
+// ══════════════════════════════════════════════
+//  自定义确认弹窗
+// ══════════════════════════════════════════════
+let _modalCallback = null;
+
+function showModal(icon, title, body, confirmLabel, callback) {
+  document.getElementById('modal-icon').textContent    = icon;
+  document.getElementById('modal-title').textContent   = title;
+  document.getElementById('modal-body').textContent    = body;
+  document.getElementById('modal-confirm').textContent = confirmLabel || '确认';
+  _modalCallback = callback;
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function modalCancel() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  _modalCallback = null;
+}
+
+function modalConfirm() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  if (_modalCallback) { var cb = _modalCallback; _modalCallback = null; cb(); }
+}
+
+function resetAllData() {
+  showModal(
+    '🗑️',
+    '重置所有答题记录',
+    '所有做题进度、错题、掌握记录将清空。题库内容不受影响。',
+    '确认重置',
+    function() {
+      decks.forEach(function(d) { localStorage.removeItem(KEY_STATS(d.id)); });
+      localStorage.removeItem(KEY_ACTIVITY);
+      selectedDeckId = null;
+      selectedChIdx  = null;
+      renderHome();
+      updateHomeButtons();
+      showPage('page-home');
+      toast('已重置所有答题记录');
+    }
+  );
+}
+
+function updateSprintCount(val) {
+  CONFIG.sprintCount = parseInt(val);
+  localStorage.setItem('cfg_sprintCount', val);
+  document.getElementById('sprint-count-val').textContent = val + '题';
+  updateSprintSub();
+}
+
+function updateMastery(val) {
+  CONFIG.masteryThreshold = parseInt(val);
+  localStorage.setItem('cfg_masteryThreshold', val);
+  document.getElementById('mastery-val').textContent = val + '次';
+}
+
+// ══════════════════════════════════════════════
+//  薄弱章节排行
+// ══════════════════════════════════════════════
+// ══════════════════════════════════════════════
+//  冲刺模式
+// ══════════════════════════════════════════════
+function startSprint() {
+  // 收集所有题目（带章节信息）
+  var hidePreset = localStorage.getItem('cfg_showPreset') === 'false';
+  var allQ = [];
+  decks.forEach(function(d) {
+    if (hidePreset && d.id === PRESET_ID) return;
+    var deck = getDeck(d.id);
+    if (!deck) return;
+    deck.chapters.forEach(function(ch, ci) {
+      ch.questions.forEach(function(q) {
+        allQ.push({ q: q, deckId: d.id, chIdx: ci, chName: ch.name, chTotal: ch.questions.length });
+      });
+    });
+  });
+
+  if (allQ.length === 0) { toast('暂无题库'); return; }
+
+  var target = CONFIG.sprintCount;
+  var total  = allQ.length;
+
+  // 按章节比例分配题量
+  var chMap = {};
+  allQ.forEach(function(item) {
+    var key = item.deckId + '_' + item.chIdx;
+    if (!chMap[key]) chMap[key] = { items: [], name: item.chName, allot: 0 };
+    chMap[key].items.push(item);
+  });
+
+  var keys = Object.keys(chMap);
+  // 按比例分配，至少每章1题（如果target够的话）
+  var remaining = target;
+  keys.forEach(function(k) {
+    var ch = chMap[k];
+    ch.allot = Math.max(1, Math.round(ch.items.length / total * target));
+  });
+  // 修正总量到 target
+  var allocated = keys.reduce(function(s, k) { return s + chMap[k].allot; }, 0);
+  var diff = target - allocated;
+  if (diff !== 0) {
+    // 从最大章节加减
+    keys.sort(function(a,b) { return chMap[b].items.length - chMap[a].items.length; });
+    var i = 0;
+    while (diff !== 0) {
+      var step = diff > 0 ? 1 : -1;
+      chMap[keys[i % keys.length]].allot += step;
+      chMap[keys[i % keys.length]].allot = Math.max(1, chMap[keys[i % keys.length]].allot);
+      diff -= step;
+      i++;
+      if (i > keys.length * 10) break; // 防死循环
+    }
+  }
+
+  // 每章随机抽 allot 题
+  quizQueue = [];
+  keys.forEach(function(k) {
+    var ch     = chMap[k];
+    var pool   = ch.items.slice();
+    var count  = Math.min(ch.allot, pool.length);
+    // Fisher-Yates shuffle 取前 count 个
+    for (var i = pool.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+    }
+    pool.slice(0, count).forEach(function(item) {
+      quizQueue.push(Object.assign({}, item.q, {
+        _deckId: item.deckId,
+        _chIdx:  item.chIdx,
+        _chName: item.chName
+      }));
+    });
+  });
+
+  // 打乱全部队列
+  for (var i = quizQueue.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = quizQueue[i]; quizQueue[i] = quizQueue[j]; quizQueue[j] = tmp;
+  }
+
+  _curDeckId    = null;  // 冲刺不属于单一章节
+  _curChIdx     = null;
+  quizMode      = 'sprint';
+  sprintChScores = {};
+  startQuiz();
+}
+
+function updateSprintSub() {
+  var hidePreset = localStorage.getItem('cfg_showPreset') === 'false';
+  var total = 0;
+  decks.forEach(function(d) {
+    if (hidePreset && d.id === PRESET_ID) return;
+    var deck = getDeck(d.id);
+    if (deck) deck.chapters.forEach(function(ch) { total += ch.questions.length; });
+  });
+  var el = document.getElementById('sprint-sub');
+  if (el) el.textContent = total > 0
+    ? ('共 ' + total + ' 题，每次抽 ' + CONFIG.sprintCount + ' 题')
+    : '跨章节随机抽题，模拟考试';
+}
+
+// ══════════════════════════════════════════════
+//  测试辅助（供 test_quiz_app.js 调用）
+// ══════════════════════════════════════════════
+function getConfig()          { return CONFIG; }
+function setConfig(key, val)  { CONFIG[key] = val; }
+function getQueueLen()        { return quizQueue.length; }
+function getQueue()           { return quizQueue; }
+function setSelected(did, ci) { selectedDeckId = did; selectedChIdx = ci; }
+function getQuizMode()        { return quizMode; }
+function getSprintChScores()  { return sprintChScores; }
+
+// ── 启动 ──
+init();
+</script>
+</body>
+</html>
